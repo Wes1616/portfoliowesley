@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — PAGE INTROUVABLE | WESLEY AMAVI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #F5F5F5;
+            --text-color: #000000;
+            --border-style: 1px solid #000;
+            --font-main: 'Space Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            font-size: 14px;
+            line-height: 1.5;
+            text-transform: uppercase;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* ── HEADER identique au portfolio ── */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: var(--border-style);
+            animation: fadeDown 0.5s ease both;
+        }
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-15px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo { font-size: 16px; font-weight: 700; text-decoration: none; color: inherit; }
+        .logo:hover { text-decoration: line-through; opacity: 0.7; }
+
+        nav a {
+            font-weight: 700; text-decoration: none; color: inherit;
+            transition: opacity 0.2s;
+        }
+        nav a:hover { text-decoration: line-through; opacity: 0.7; }
+
+        /* ── MAIN 404 ── */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 30px;
+            padding: 60px 20px;
+            animation: fadeIn 0.6s ease 0.2s both;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Le grand "404" terminal */
+        .error-code {
+            font-size: clamp(80px, 20vw, 180px);
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -4px;
+            /* effet glitch subtil */
+            animation: glitch 4s infinite;
+            position: relative;
+        }
+        @keyframes glitch {
+            0%,  94%, 100% { transform: none; opacity: 1; }
+            95%  { transform: translateX(-3px); opacity: 0.85; }
+            96%  { transform: translateX(3px);  opacity: 0.85; }
+            97%  { transform: none; opacity: 1; }
+            98%  { transform: translateX(-2px) skewX(-2deg); opacity: 0.9; }
+            99%  { transform: none; opacity: 1; }
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #000;
+        }
+
+        /* Terminal-style message */
+        .terminal-block {
+            border: var(--border-style);
+            padding: 20px 30px;
+            max-width: 520px;
+            width: 100%;
+            text-align: left;
+            background: #fff;
+        }
+        .terminal-line {
+            font-size: 12px;
+            margin-bottom: 8px;
+            display: flex;
+            gap: 10px;
+        }
+        .terminal-line:last-child { margin-bottom: 0; }
+        .prompt { opacity: 0.4; flex-shrink: 0; }
+        .terminal-line.error-line .value { color: #000; font-weight: 700; }
+        .cursor-blink {
+            display: inline-block;
+            width: 8px; height: 14px;
+            background: #000;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 4px;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50%       { opacity: 0; }
+        }
+
+        .subtitle {
+            font-size: 13px;
+            opacity: 0.6;
+            max-width: 400px;
+        }
+
+        /* Bouton retour */
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: #000;
+            color: #fff;
+            font-family: var(--font-main);
+            font-weight: 700;
+            font-size: 13px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 2px solid #000;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+        .btn-home:hover {
+            background: transparent;
+            color: #000;
+            transform: translateY(-2px);
+            text-decoration: none;
+            opacity: 1;
+        }
+        .btn-home:hover { text-decoration: none !important; opacity: 1 !important; }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: var(--border-style);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 600px) {
+            .error-code { letter-spacing: -2px; }
+            header { flex-direction: column; gap: 15px; align-items: flex-start; }
+            footer { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">WESLEY AMAVI — SISR</a>
+        <nav>
+            <a href="index.html">← RETOUR AU PORTFOLIO</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="error-code">404</div>
+
+        <div class="divider"></div>
+
+        <div class="terminal-block">
+            <div class="terminal-line error-line">
+                <span class="prompt">[ERREUR]</span>
+                <span class="value">PAGE_NOT_FOUND</span>
+            </div>
+            <div class="terminal-line">
+                <span class="prompt">[PATH]</span>
+                <span class="value" id="error-path">/???</span>
+            </div>
+            <div class="terminal-line">
+                <span class="prompt">[STATUS]</span>
+                <span>HTTP 404 — RESSOURCE INTROUVABLE</span>
+            </div>
+            <div class="terminal-line">
+                <span class="prompt">[ACTION]</span>
+                <span>REDIRECTION SUGGÉRÉE → INDEX.HTML<span class="cursor-blink"></span></span>
+            </div>
+        </div>
+
+        <p class="subtitle">
+            Cette page n'existe pas ou a été déplacée.<br>
+            Retourne à l'accueil pour explorer le portfolio.
+        </p>
+
+        <a href="index.html" class="btn-home">
+            ← RETOUR À L'ACCUEIL
+        </a>
+    </main>
+
+    <footer>
+        <span>© 2026 WESLEY AMAVI — BTS SIO SISR</span>
+        <span>INSTA PARIS</span>
+    </footer>
+
+    <script>
+        // Affiche le chemin de la page qui a déclenché le 404
+        const path = window.location.pathname;
+        document.getElementById('error-path').textContent = path || '/???';
+    </script>
+
+</body>
+</html>
