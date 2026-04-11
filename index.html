@@ -100,7 +100,6 @@
             overflow: hidden;
             white-space: nowrap;
             width: 0;
-            /* "WESLEY AMAVI" = 13 caractères */
             animation: typing 0.8s steps(13, end) 0.2s forwards;
         }
         @keyframes typing {
@@ -284,7 +283,6 @@
 </head>
 <body>
 
-    <!-- Barre de progression scroll -->
     <div id="scroll-progress"></div>
 
     <header>
@@ -325,7 +323,7 @@
         <div class="about-bio border-right">
             <h3>À PROPOS</h3>
             <p>
-                Actuellement étudiant en première année de BTS SIO (Services Informatiques aux Organisations) – option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) à l'Insta Paris, je suis passionné par l'informatique et les nouvelles technologies.
+                Actuellement étudiant en deuxième année de BTS SIO (Services Informatiques aux Organisations) – option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) à l'Insta Paris. Passionné par l'informatique et les nouvelles technologies.
             </p>
             <p>
                 Après l'obtention de mon Bac STMG en 2024, j'ai choisi cette formation afin de développer mes compétences en administration des systèmes et réseaux, tout en approfondissant mes connaissances sur les infrastructures IT.
@@ -352,7 +350,7 @@
                         <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=800&auto=format&fit=crop" alt="Cisco Packet Tracer">
                     </div>
                     <div class="project-info">
-                        <h3>DÉPLOIEMENT DHCP & ROUTAGE</h3>
+                        <h3>SUJET 1 : DÉPLOIEMENT DHCP & ROUTAGE</h3>
                         <p class="project-tags">[CISCO] [DHCP] [VLAN] [RIPv2]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
                             <strong>Contexte :</strong> Orange / Établissement Scolaire.<br>
@@ -370,7 +368,7 @@
                         <img src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=800&auto=format&fit=crop" alt="VLAN Security">
                     </div>
                     <div class="project-info">
-                        <h3>SEGMENTATION RÉSEAU (VLAN)</h3>
+                        <h3>SUJET 2 : SEGMENTATION RÉSEAU (VLAN)</h3>
                         <p class="project-tags">[CISCO] [SÉCURITÉ] [VLAN] [SWITCHING]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
                             <strong>Contexte :</strong> Free (Télécom).<br>
@@ -385,15 +383,14 @@
             <article class="project-card reveal reveal-delay-3">
                 <a href="sujet3.pdf" target="_blank">
                     <div class="image-aspect-ratio">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="PME Network">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="Active Directory">
                     </div>
                     <div class="project-info">
-                        <h3>ARCHITECTURE RÉSEAU PME</h3>
-                        <p class="project-tags">[CISCO] [VLAN] [DHCP] [ROUTAGE]</p>
+                        <h3>SUJET 3 : CENTRALISATION ACTIVE DIRECTORY</h3>
+                        <p class="project-tags">[WIN SVR] [AD DS] [GPO] [SÉCURITÉ]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
-                            <strong>Contexte :</strong> DocuTech Solutions.<br>
-                            <strong>Objectif :</strong> Segmentation Administration / Production.<br>
-                            <strong>Réalisation :</strong> VLANs, DHCP sur routeurs, Routage RIP.
+                            <strong>Objectif :</strong> Centralisation des identités et sécurisation des postes.<br>
+                            <strong>Réalisation :</strong> Installation Rôle AD DS, DNS, et sécurisation des postes par stratégies de groupe (GPO).
                         </p>
                         <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
@@ -403,15 +400,14 @@
             <article class="project-card reveal reveal-delay-4">
                 <a href="sujet4.pdf" target="_blank">
                     <div class="image-aspect-ratio">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop" alt="Redondance">
+                        <img src="https://images.unsplash.com/photo-1551703599-6b3e8379aa8c?q=80&w=800&auto=format&fit=crop" alt="NAT pfSense">
                     </div>
                     <div class="project-info">
-                        <h3>INFRASTRUCTURE REDONDANTE</h3>
-                        <p class="project-tags">[CISCO] [HSRP] [LACP] [STP]</p>
+                        <h3>SUJET 4 : NAT/PAT & SÉCURISATION PÉRIMÉTRIQUE</h3>
+                        <p class="project-tags">[PFSENSE] [NAT/PAT] [FIREWALL] [SÉCURITÉ]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
-                            <strong>Contexte :</strong> Capgemini (Simulé).<br>
-                            <strong>Objectif :</strong> Haute disponibilité & Tolérance aux pannes.<br>
-                            <strong>Réalisation :</strong> Routeurs virtuels (HSRP), Agrégation (LACP).
+                            <strong>Objectif :</strong> Mise en place d'une passerelle sécurisée via pfSense.<br>
+                            <strong>Réalisation :</strong> Configuration NAT/PAT, règles de filtrage et isolation périmétrique du réseau LAN.
                         </p>
                         <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
@@ -419,49 +415,70 @@
             </article>
 
             <article class="project-card reveal reveal-delay-5">
-                <a href="#">
+                <a href="sujet5.pdf" target="_blank">
                     <div class="image-aspect-ratio">
-                        <img src="https://images.unsplash.com/photo-1563206767-5b1d972d9323?q=80&w=800&auto=format&fit=crop" alt="GLPI">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="HA Capgemini">
                     </div>
                     <div class="project-info">
-                        <h3>MISE EN PLACE GLPI</h3>
-                        <p class="project-tags">[TICKETING] [INVENTAIRE] [LAMP]</p>
+                        <h3>SUJET 5 : HAUTE DISPONIBILITÉ DU CŒUR DE RÉSEAU</h3>
+                        <p class="project-tags">[HSRP] [ETHERCHANNEL LACP] [RAPID-PVST+]</p>
+                        <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
+                            <strong>Contexte :</strong> Capgemini - Environnement de production critique.<br>
+                            <strong>Objectif :</strong> Éliminer le SPOF sur la passerelle (VIP 192.168.1.1) et les liens inter-commutateurs.<br>
+                            <strong>Réalisation :</strong> Agrégation LACP, redondance HSRP (priorité 110) et Spanning Tree rapide.
+                        </p>
+                        <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
                 </a>
             </article>
 
             <article class="project-card reveal reveal-delay-6">
-                <a href="#">
+                <a href="sujet6.pdf" target="_blank">
                     <div class="image-aspect-ratio">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=800&auto=format&fit=crop" alt="AD">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop" alt="Serveur de fichiers">
                     </div>
                     <div class="project-info">
-                        <h3>DÉPLOIEMENT ACTIVE DIRECTORY</h3>
-                        <p class="project-tags">[WIN SVR] [DNS/DHCP] [GPO]</p>
+                        <h3>SUJET 6 : SERVEUR DE FICHIERS CENTRALISÉ</h3>
+                        <p class="project-tags">[NTFS] [ABE] [FSRM] [GOUVERNANCE]</p>
+                        <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
+                            <strong>Objectif :</strong> Gouvernance des données et partage sécurisé.<br>
+                            <strong>Réalisation :</strong> Droits NTFS fins, Access Based Enumeration (ABE) et quotas via FSRM.
+                        </p>
+                        <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
                 </a>
             </article>
 
             <article class="project-card reveal reveal-delay-7">
-                <a href="#">
+                <a href="sujet7.pdf" target="_blank">
                     <div class="image-aspect-ratio">
-                        <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=800&auto=format&fit=crop" alt="Sauvegarde">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="GLPI Helpdesk">
                     </div>
                     <div class="project-info">
-                        <h3>SOLUTION DE SAUVEGARDE</h3>
-                        <p class="project-tags">[VEEAM] [NAS] [RÉTENTION]</p>
+                        <h3>SUJET 7 : GESTION DE PARC & HELPDESK</h3>
+                        <p class="project-tags">[GLPI 10] [STACK LAMP] [DEBIAN 12] [ITSM]</p>
+                        <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
+                            <strong>Objectif :</strong> Mise en œuvre d'une solution ITSM sous Debian 12.<br>
+                            <strong>Réalisation :</strong> Installation stack LAMP, configuration GLPI 10 pour inventaire et ticketing.
+                        </p>
+                        <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
                 </a>
             </article>
 
             <article class="project-card reveal reveal-delay-8">
-                <a href="#">
+                <a href="sujet8.pdf" target="_blank">
                     <div class="image-aspect-ratio">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Supervision">
                     </div>
                     <div class="project-info">
-                        <h3>SUPERVISION ZABBIX</h3>
+                        <h3>SUJET 8 : SUPERVISION ZABBIX</h3>
                         <p class="project-tags">[MONITORING] [SNMP] [ALERTES]</p>
+                        <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
+                            <strong>Objectif :</strong> Détection proactive des incidents réseau.<br>
+                            <strong>Réalisation :</strong> Monitoring via agents et protocoles SNMP avec système d'alerting.
+                        </p>
+                        <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
                 </a>
             </article>
@@ -474,27 +491,37 @@
         <div class="projects-grid">
 
             <article class="project-card reveal reveal-delay-1">
-                <a href="#">
+                <a href="sujete61.pdf" target="_blank">
                     <div class="image-aspect-ratio">
-                        <img src="https://images.unsplash.com/photo-1563206767-5b1d972d9323?q=80&w=800&auto=format&fit=crop" alt="Firewall">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" alt="Firewall pfSense">
                     </div>
                     <div class="project-info">
-                        <h3>[RÉSEAU] SÉCURITÉ PÉRIMÉTRIQUE</h3>
-                        <p class="project-tags">[PFSENSE] [FIREWALL] [FILTRAGE]</p>
-                        <p style="margin-top:10px; font-size:11px; opacity:0.8;">Maintien en condition opérationnelle de la sécurité réseau et gestion des règles.</p>
+                        <h3>SUJET E6-1 : TICKETING CENTRALISÉ SÉCURISÉ</h3>
+                        <p class="project-tags">[GLPI] [PFSENSE] [DEBIAN 12] [MFA] [LAMP]</p>
+                        <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
+                            <strong>Contexte :</strong> Novalink.<br>
+                            <strong>Objectif :</strong> Déploiement d'un service Helpdesk isolé derrière un pare-feu pfSense.<br>
+                            <strong>Réalisation :</strong> Installation GLPI sur Debian (LAMP), filtrage réseau et authentification renforcée (MFA).
+                        </p>
+                        <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
                 </a>
             </article>
 
             <article class="project-card reveal reveal-delay-2">
-                <a href="#">
+                <a href="sujete62.pdf" target="_blank">
                     <div class="image-aspect-ratio">
-                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop" alt="System">
+                        <img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387?q=80&w=800&auto=format&fit=crop" alt="Réseau PME">
                     </div>
                     <div class="project-info">
-                        <h3>[SYSTÈME] GESTION DES MISES À JOUR</h3>
-                        <p class="project-tags">[WSUS] [PATCH] [WINDOWS SVR]</p>
-                        <p style="margin-top:10px; font-size:11px; opacity:0.8;">Déploiement centralisé des correctifs de sécurité sur le parc serveur.</p>
+                        <h3>SUJET E6-2 : INFRASTRUCTURE RÉSEAU PME</h3>
+                        <p class="project-tags">[CISCO] [VLAN] [ROUTAGE] [ADRESSAGE]</p>
+                        <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
+                            <strong>Contexte :</strong> Novalink / Réseau local simple.<br>
+                            <strong>Objectif :</strong> Connectivité Internet stable et partage de fichiers entre postes.<br>
+                            <strong>Réalisation :</strong> Segmentation par VLANs, configuration switch/routeur et plan d'adressage LAN.
+                        </p>
+                        <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
                 </a>
             </article>
@@ -508,17 +535,17 @@
             <article class="project-card reveal reveal-delay-1">
                 <a href="veille.pdf" target="_blank" rel="noopener noreferrer">
                     <div class="image-aspect-ratio">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" alt="DDoS Security">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop" alt="DDoS Security">
                     </div>
                     <div class="project-info">
                         <h3>SUJET : LES ATTAQUES DDOS & INFRASTRUCTURES</h3>
                         <p class="project-tags">[SÉCURITÉ] [BOTNETS] [CLOUD ARMOR] [WAF]</p>
                         <p style="margin-top:10px; font-size:12px; opacity:0.8; text-transform: none;">
                             <strong>Problématique :</strong> Comment les attaques DDoS évoluent-elles face aux stratégies de défense ?<br>
-                            <strong>Contexte :</strong> Hausse de 137% des attaques en Europe. Attaque record de Juin 2025 (46 millions req/s).<br>
-                            <strong>Solutions étudiées :</strong> Pare-feu, WAF, CDN (Cloudflare) et supervision Zabbix.
+                            <strong>Contexte :</strong> Hausse record des attaques en 2025.<br>
+                            <strong>Solutions :</strong> Pare-feu, WAF, CDN (Cloudflare) et supervision.
                         </p>
-                        <p class="project-tags" style="margin-top:10px; color:#555;">CLIQUEZ POUR LIRE LE DOSSIER PDF</p>
+                        <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LA VEILLE (PDF)</p>
                     </div>
                 </a>
             </article>
@@ -535,7 +562,6 @@
                     <h3>ANSSI - EBIOS RISK MANAGER</h3>
                     <p class="project-tags">[ANSSI] [MOOC] [GESTION RISQUES]</p>
                     <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
-                        Introduction à la méthode EBIOS Risk Manager.<br>
                         Obtenu le 30/10/2025.
                     </p>
                 </div>
@@ -547,7 +573,6 @@
                     <h3>CISCO - INTRO TO CYBERSECURITY</h3>
                     <p class="project-tags">[CISCO] [NETACAD] [SÉCURITÉ]</p>
                     <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
-                        Bases de la cybersécurité et protection des données.<br>
                         Obtenu le 28/04/2025.
                     </p>
                 </div>
@@ -584,14 +609,12 @@
     </a>
 
     <script>
-        // 1. BARRE DE PROGRESSION SCROLL
         const progressBar = document.getElementById('scroll-progress');
         window.addEventListener('scroll', () => {
             const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             progressBar.style.width = pct + '%';
         });
 
-        // 2. SCROLL REVEAL
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -606,15 +629,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
