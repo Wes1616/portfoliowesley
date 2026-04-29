@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* --- CSS VARIABLES & RESET --- */
         :root {
             --bg-color: #F5F5F5;
             --text-color: #000000;
@@ -21,7 +20,6 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
 
         body {
@@ -36,7 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* ── BARRE DE PROGRESSION SCROLL ── */
         #scroll-progress {
             position: fixed;
             top: 0; left: 0;
@@ -47,11 +44,10 @@
             transition: width 0.05s linear;
         }
 
-        /* --- TYPO --- */
         h1 { font-size: 24px; font-weight: 700; line-height: 1.2; }
         h2 { font-size: 14px; font-weight: 400; opacity: 0.8; }
         h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
-        
+
         .section-title {
             font-size: 20px;
             font-weight: 700;
@@ -59,19 +55,15 @@
             border-bottom: 2px solid #000;
             display: inline-block;
             padding-bottom: 5px;
-            position: relative;
-            overflow: hidden;
         }
 
         a { text-decoration: none; color: inherit; }
         a:hover { text-decoration: line-through; opacity: 0.7; }
         ul { list-style: none; }
 
-        /* --- LAYOUT --- */
         .border-right { border-right: var(--border-style); }
         .bold { font-weight: 700; }
-        
-        /* --- HEADER --- */
+
         header {
             display: flex;
             justify-content: space-between;
@@ -94,7 +86,6 @@
             to   { opacity: 1; }
         }
 
-        /* ── TYPEWRITER ── */
         #typewriter-name {
             display: inline-block;
             overflow: hidden;
@@ -107,7 +98,6 @@
             to   { width: 13ch; }
         }
 
-        /* --- SCROLL REVEAL --- */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -125,14 +115,12 @@
         .reveal-delay-7 { transition-delay: 0.47s; }
         .reveal-delay-8 { transition-delay: 0.54s; }
 
-        /* --- TECH BAR --- */
         .tech-bar {
             display: grid; grid-template-columns: repeat(3, 1fr);
             border-bottom: var(--border-style);
         }
         .tech-item { padding: 15px; font-size: 12px; }
 
-        /* --- ABOUT --- */
         #about {
             display: grid; grid-template-columns: 2fr 1fr;
             border-bottom: var(--border-style);
@@ -142,7 +130,6 @@
         .about-info ul li { margin-bottom: 12px; display: flex; flex-direction: column; }
         .info-label { opacity: 0.6; font-size: 11px; margin-bottom: 3px; text-transform: uppercase;}
 
-        /* --- SECTIONS PROJETS --- */
         .exam-section { margin-top: 60px; }
 
         .projects-grid {
@@ -187,7 +174,6 @@
         .project-info { padding: 15px; }
         .project-tags { margin-top: 10px; font-size: 11px; opacity: 0.7; }
 
-        /* --- NAV --- */
         nav ul { display: flex; gap: 30px; font-weight: 700; }
         nav a { position: relative; text-decoration: none !important; opacity: 1 !important; }
         nav a::after {
@@ -198,7 +184,6 @@
         nav a:hover { text-decoration: none !important; opacity: 1 !important; }
         nav a:hover::after { width: 100%; }
 
-        /* --- PROFILE PICTURE --- */
         .identity-block { display: flex; align-items: center; gap: 20px; }
         .profile-picture-container {
             width: 120px; height: 120px;
@@ -213,7 +198,6 @@
         }
         .profile-picture-container:hover img { filter: grayscale(0%); }
 
-        /* --- CONTACT FORM --- */
         .contact-form { display: flex; flex-direction: column; gap: 15px; max-width: 600px; }
         .contact-form input, .contact-form textarea {
             width: 100%; padding: 15px;
@@ -237,7 +221,6 @@
         .contact-form button:hover { background-color: #333; transform: translateY(-2px); }
         .contact-form button:active { transform: translateY(0); }
 
-        /* --- BOUTON MAIL FLOTTANT --- */
         .mail-fab {
             position: fixed; bottom: 30px; right: 30px;
             width: 60px; height: 60px;
@@ -262,7 +245,6 @@
         }
         .mail-fab svg { width: 24px; height: 24px; fill: #ffffff; }
 
-        /* --- TABLEAU DE SYNTHESE --- */
         #tableau .synthese-card {
             border: var(--border-style);
             background: var(--bg-color);
@@ -306,9 +288,7 @@
             flex-wrap: wrap;
         }
 
-        .synthese-badges {
-            display: flex; flex-wrap: wrap; gap: 8px;
-        }
+        .synthese-badges { display: flex; flex-wrap: wrap; gap: 8px; }
         .badge {
             font-size: 11px; font-weight: 700;
             padding: 4px 10px;
@@ -343,14 +323,255 @@
         .synthese-btn svg { width: 16px; height: 16px; transition: fill 0.2s ease; }
         .synthese-btn:hover svg { fill: #000; }
 
-        /* --- FOOTER --- */
+        .btn-simu {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: var(--font-main);
+            text-transform: uppercase;
+            padding: 7px 14px;
+            background: #000;
+            color: #fff;
+            border: 1px solid #000;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+            text-decoration: none !important;
+        }
+        .btn-simu:hover {
+            background: #fff;
+            color: #000;
+            opacity: 1 !important;
+            text-decoration: none !important;
+            transform: translateY(-2px);
+        }
+        .btn-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        .sep-bar { color: #bbb; font-size: 14px; }
+
         footer {
             border-top: var(--border-style); padding: 30px 0; margin-top: 80px;
             display: flex; justify-content: space-between;
         }
         .footer-links { display: flex; gap: 20px; }
 
-        /* --- RESPONSIVE --- */
+        /* ===== SIMULATION MODALE ===== */
+        #sim-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 8000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        #sim-overlay.open { display: flex; }
+
+        #sim-modal {
+            background: #0d0d0d;
+            border: 2px solid #000;
+            width: 100%;
+            max-width: 720px;
+            font-family: var(--font-main);
+            color: #e0e0e0;
+            position: relative;
+            animation: modalIn 0.25s ease;
+        }
+        @keyframes modalIn {
+            from { opacity:0; transform: translateY(20px); }
+            to   { opacity:1; transform: translateY(0); }
+        }
+
+        #sim-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid #222;
+            background: #111;
+        }
+        #sim-modal-header h3 {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff;
+            margin: 0;
+        }
+        #sim-close {
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 20px;
+            cursor: pointer;
+            font-family: var(--font-main);
+            line-height: 1;
+            transition: color 0.2s;
+        }
+        #sim-close:hover { color: #fff; }
+
+        #sim-body { padding: 20px; }
+
+        /* STATUS BAR */
+        #sim-status-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            border: 1px solid #222;
+            margin-bottom: 16px;
+            background: #111;
+        }
+        #sim-status-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #444;
+            flex-shrink: 0;
+        }
+        #sim-status-dot.idle    { background: #555; }
+        #sim-status-dot.attack  { background: #ff3333; animation: blink 0.5s infinite; }
+        #sim-status-dot.defend  { background: #ffaa00; animation: blink 0.8s infinite; }
+        #sim-status-dot.safe    { background: #00cc66; }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+        #sim-status-text { font-size: 11px; letter-spacing: 1px; color: #888; }
+        #sim-status-text.attack { color: #ff3333; }
+        #sim-status-text.defend { color: #ffaa00; }
+        #sim-status-text.safe   { color: #00cc66; }
+
+        /* METRICS */
+        #sim-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: #222;
+            border: 1px solid #222;
+            margin-bottom: 16px;
+        }
+        .sim-metric {
+            background: #111;
+            padding: 12px 14px;
+        }
+        .sim-metric-label { font-size: 9px; color: #555; letter-spacing: 1px; margin-bottom: 4px; }
+        .sim-metric-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        .sim-metric-value.red   { color: #ff3333; }
+        .sim-metric-value.amber { color: #ffaa00; }
+        .sim-metric-value.green { color: #00cc66; }
+        .sim-metric-unit { font-size: 10px; color: #555; margin-left: 2px; }
+
+        /* PROGRESS BARS */
+        .sim-bar-wrap {
+            height: 2px;
+            background: #222;
+            margin-top: 6px;
+        }
+        .sim-bar {
+            height: 100%;
+            width: 0%;
+            background: #444;
+            transition: width 0.4s ease, background 0.4s;
+        }
+
+        /* LOG */
+        #sim-log {
+            border: 1px solid #222;
+            background: #080808;
+            height: 140px;
+            overflow-y: auto;
+            padding: 10px 12px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        #sim-log::-webkit-scrollbar { width: 3px; }
+        #sim-log::-webkit-scrollbar-thumb { background: #333; }
+
+        .sim-log-line {
+            font-size: 10px;
+            line-height: 1.7;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+        .sim-log-line .ts    { color: #444; margin-right: 8px; }
+        .sim-log-line .tag   { font-weight: 700; margin-right: 6px; }
+        .sim-log-line .tag.atk  { color: #ff3333; }
+        .sim-log-line .tag.def  { color: #00cc66; }
+        .sim-log-line .tag.sys  { color: #888; }
+        .sim-log-line .msg   { color: #aaa; }
+
+        /* BUTTONS */
+        #sim-btns {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .sim-btn {
+            font-family: var(--font-main);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border: 1px solid;
+            cursor: pointer;
+            background: transparent;
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+        }
+        .sim-btn:hover:not(:disabled) { transform: translateY(-2px); }
+        .sim-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+
+        .sim-btn-attack { color: #ff3333; border-color: #ff3333; }
+        .sim-btn-attack:hover:not(:disabled) { background: #ff3333; color: #000; }
+
+        .sim-btn-defend { color: #00cc66; border-color: #00cc66; }
+        .sim-btn-defend:hover:not(:disabled) { background: #00cc66; color: #000; }
+
+        .sim-btn-reset  { color: #555; border-color: #333; }
+        .sim-btn-reset:hover { color: #aaa; border-color: #666; }
+
+        /* DEFENSE CHECKLIST */
+        #sim-defenses {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+        .sim-def-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 12px;
+            border: 1px solid #1a1a1a;
+            font-size: 10px;
+            letter-spacing: 1px;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .sim-def-row.on  { border-color: #00cc6644; background: rgba(0,204,102,0.04); }
+        .sim-def-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: #333;
+            flex-shrink: 0;
+            transition: background 0.3s;
+        }
+        .sim-def-row.on .sim-def-dot { background: #00cc66; }
+        .sim-def-name { flex: 1; color: #666; }
+        .sim-def-row.on .sim-def-name { color: #ccc; }
+        .sim-def-tag { font-size: 9px; color: #333; }
+        .sim-def-row.on .sim-def-tag { color: #00cc66; }
+
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 20px; }
             nav ul { flex-direction: column; gap: 10px; }
@@ -361,12 +582,83 @@
             .contact-form { width: 100%; }
             .synthese-body { flex-direction: column; align-items: flex-start; }
             .synthese-btn { width: 100%; justify-content: center; }
+            #sim-metrics { grid-template-columns: repeat(3,1fr); }
+        }
+        @media (max-width: 480px) {
+            #sim-metrics { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
 
     <div id="scroll-progress"></div>
+
+    <!-- ===== SIMULATION MODALE ===== -->
+    <div id="sim-overlay" role="dialog" aria-modal="true" aria-label="Simulation DDoS">
+        <div id="sim-modal">
+            <div id="sim-modal-header">
+                <h3>⚡ SIMULATION — ATTAQUE DDOS</h3>
+                <button id="sim-close" onclick="closeSim()" title="Fermer">✕</button>
+            </div>
+            <div id="sim-body">
+
+                <!-- Status -->
+                <div id="sim-status-bar">
+                    <div id="sim-status-dot" class="idle"></div>
+                    <span id="sim-status-text" class="idle">EN ATTENTE — Cliquez sur LANCER L'ATTAQUE</span>
+                </div>
+
+                <!-- Metrics -->
+                <div id="sim-metrics">
+                    <div class="sim-metric">
+                        <div class="sim-metric-label">TRAFIC ENTRANT</div>
+                        <div class="sim-metric-value" id="m-traffic">0 <span class="sim-metric-unit">Mbps</span></div>
+                        <div class="sim-bar-wrap"><div class="sim-bar" id="bar-traffic"></div></div>
+                    </div>
+                    <div class="sim-metric">
+                        <div class="sim-metric-label">CHARGE SERVEUR</div>
+                        <div class="sim-metric-value" id="m-cpu">0 <span class="sim-metric-unit">%</span></div>
+                        <div class="sim-bar-wrap"><div class="sim-bar" id="bar-cpu"></div></div>
+                    </div>
+                    <div class="sim-metric">
+                        <div class="sim-metric-label">DISPONIBILITÉ</div>
+                        <div class="sim-metric-value green" id="m-uptime">100 <span class="sim-metric-unit">%</span></div>
+                        <div class="sim-bar-wrap"><div class="sim-bar" id="bar-uptime" style="width:100%;background:#00cc66"></div></div>
+                    </div>
+                </div>
+
+                <!-- Defense layers -->
+                <div id="sim-defenses">
+                    <div class="sim-def-row" id="def-fw">
+                        <div class="sim-def-dot"></div>
+                        <span class="sim-def-name">PARE-FEU PFSENSE</span>
+                        <span class="sim-def-tag">INACTIF</span>
+                    </div>
+                    <div class="sim-def-row" id="def-ids">
+                        <div class="sim-def-dot"></div>
+                        <span class="sim-def-name">IDS/IPS SURICATA — DÉTECTION COMPORTEMENTALE</span>
+                        <span class="sim-def-tag">INACTIF</span>
+                    </div>
+                    <div class="sim-def-row" id="def-cdn">
+                        <div class="sim-def-dot"></div>
+                        <span class="sim-def-name">CDN CLOUDFLARE — ANYCAST</span>
+                        <span class="sim-def-tag">INACTIF</span>
+                    </div>
+                </div>
+
+                <!-- Log -->
+                <div id="sim-log"></div>
+
+                <!-- Buttons -->
+                <div id="sim-btns">
+                    <button class="sim-btn sim-btn-attack" id="btn-attack" onclick="launchAttack()">⚡ LANCER L'ATTAQUE</button>
+                    <button class="sim-btn sim-btn-defend" id="btn-defend" onclick="activateDefense()" disabled>🛡 CONTRER L'ATTAQUE</button>
+                    <button class="sim-btn sim-btn-reset" onclick="resetSim()">↺ RÉINITIALISER</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <header>
         <div class="identity-block">
@@ -410,7 +702,7 @@
                 Actuellement étudiant en deuxième année de BTS SIO (Services Informatiques aux Organisations) – option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) à l'Insta Paris. Passionné par l'informatique et les nouvelles technologies.
             </p>
             <p>
-                Après l'obtention de mon Bac STMG en 2024, j'ai choisi cette formation afin de développer mes compétences en administration des systèmes et réseaux, tout en approfondissant mes connaissances sur les infrastructures IT.
+                Après 2024, j'ai choisi cette formation afin de développer mes compétences en administration des systèmes et réseaux, tout en approfondissant mes connaissances sur les infrastructures IT.
             </p>
         </div>
         <div class="about-info">
@@ -424,6 +716,7 @@
         </div>
     </section>
 
+    <!-- ===== E5 ===== -->
     <section id="e5" class="exam-section">
         <div class="section-title reveal">E5 — PRODUCTION DE SERVICES (8)</div>
         <div class="projects-grid">
@@ -449,15 +742,15 @@
             <article class="project-card reveal reveal-delay-2">
                 <a href="sujet2.pdf" target="_blank">
                     <div class="image-aspect-ratio">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=800&auto=format&fit=crop" alt="VLAN Security">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=800&auto=format&fit=crop" alt="WDS Déploiement">
                     </div>
                     <div class="project-info">
-                        <h3>SUJET 2 : SEGMENTATION RÉSEAU (VLAN)</h3>
-                        <p class="project-tags">[CISCO] [SÉCURITÉ] [VLAN] [SWITCHING]</p>
+                        <h3>SUJET 2 : INDUSTRIALISATION DU DÉPLOIEMENT WDS</h3>
+                        <p class="project-tags">[WDS] [PXE] [SYSPREP] [MULTICAST] [WIN SVR 2022]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
-                            <strong>Contexte :</strong> Free (Télécom).<br>
-                            <strong>Objectif :</strong> Isolation des flux (Support, R&D).<br>
-                            <strong>Réalisation :</strong> Création VLAN 10/11, mode Trunk/Access et routage inter-VLAN.
+                            <strong>Contexte :</strong> Nexus-IT Services — ESN spécialisée en infogérance.<br>
+                            <strong>Objectif :</strong> Déployer 50+ postes Windows en masse.<br>
+                            <strong>Réalisation :</strong> Rôle WDS + PXE Boot, image .WIM Sysprep, Multicast.
                         </p>
                         <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
@@ -474,7 +767,7 @@
                         <p class="project-tags">[WIN SVR] [AD DS] [GPO] [SÉCURITÉ]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
                             <strong>Objectif :</strong> Centralisation des identités et sécurisation des postes.<br>
-                            <strong>Réalisation :</strong> Installation Rôle AD DS, DNS, et sécurisation des postes par stratégies de groupe (GPO).
+                            <strong>Réalisation :</strong> Installation Rôle AD DS, DNS, et sécurisation par GPO.
                         </p>
                         <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
@@ -491,7 +784,7 @@
                         <p class="project-tags">[PFSENSE] [NAT/PAT] [FIREWALL] [SÉCURITÉ]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
                             <strong>Objectif :</strong> Mise en place d'une passerelle sécurisée via pfSense.<br>
-                            <strong>Réalisation :</strong> Configuration NAT/PAT, règles de filtrage et isolation périmétrique du réseau LAN.
+                            <strong>Réalisation :</strong> Configuration NAT/PAT, règles de filtrage et isolation périmétrique.
                         </p>
                         <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
@@ -508,8 +801,7 @@
                         <p class="project-tags">[HSRP] [ETHERCHANNEL LACP] [RAPID-PVST+]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
                             <strong>Contexte :</strong> Capgemini - Environnement de production critique.<br>
-                            <strong>Objectif :</strong> Éliminer le SPOF sur la passerelle (VIP 192.168.1.1) et les liens inter-commutateurs.<br>
-                            <strong>Réalisation :</strong> Agrégation LACP, redondance HSRP (priorité 110) et Spanning Tree rapide.
+                            <strong>Réalisation :</strong> Agrégation LACP, redondance HSRP et Spanning Tree rapide.
                         </p>
                         <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
@@ -526,7 +818,7 @@
                         <p class="project-tags">[NTFS] [ABE] [FSRM] [GOUVERNANCE]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
                             <strong>Objectif :</strong> Gouvernance des données et partage sécurisé.<br>
-                            <strong>Réalisation :</strong> Droits NTFS fins, Access Based Enumeration (ABE) et quotas via FSRM.
+                            <strong>Réalisation :</strong> Droits NTFS fins, ABE et quotas via FSRM.
                         </p>
                         <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
@@ -560,7 +852,7 @@
                         <p class="project-tags">[MONITORING] [SNMP] [ALERTES]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
                             <strong>Objectif :</strong> Détection proactive des incidents réseau.<br>
-                            <strong>Réalisation :</strong> Monitoring via agents et protocoles SNMP avec système d'alerting.
+                            <strong>Réalisation :</strong> Monitoring via agents et protocoles SNMP avec alerting.
                         </p>
                         <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
@@ -570,6 +862,7 @@
         </div>
     </section>
 
+    <!-- ===== E6 ===== -->
     <section id="e6" class="exam-section">
         <div class="section-title reveal">E6 — GESTION DU PATRIMOINE (2)</div>
         <div class="projects-grid">
@@ -584,8 +877,7 @@
                         <p class="project-tags">[GLPI] [PFSENSE] [DEBIAN 12] [MFA] [LAMP]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
                             <strong>Contexte :</strong> Novalink.<br>
-                            <strong>Objectif :</strong> Déploiement d'un service Helpdesk isolé derrière un pare-feu pfSense.<br>
-                            <strong>Réalisation :</strong> Installation GLPI sur Debian (LAMP), filtrage réseau et authentification renforcée (MFA).
+                            <strong>Réalisation :</strong> Installation GLPI sur Debian (LAMP), filtrage réseau et MFA.
                         </p>
                         <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
                     </div>
@@ -602,7 +894,6 @@
                         <p class="project-tags">[CISCO] [VLAN] [ROUTAGE] [ADRESSAGE]</p>
                         <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
                             <strong>Contexte :</strong> Novalink / Réseau local simple.<br>
-                            <strong>Objectif :</strong> Connectivité Internet stable et partage de fichiers entre postes.<br>
                             <strong>Réalisation :</strong> Segmentation par VLANs, configuration switch/routeur et plan d'adressage LAN.
                         </p>
                         <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LE DOSSIER (PDF)</p>
@@ -613,29 +904,33 @@
         </div>
     </section>
 
+    <!-- ===== VEILLE ===== -->
     <section id="veille" class="exam-section">
         <div class="section-title reveal">VEILLE TECHNOLOGIQUE</div>
         <div class="projects-grid">
-            <article class="project-card reveal reveal-delay-1">
-                <a href="veille.pdf" target="_blank" rel="noopener noreferrer">
-                    <div class="image-aspect-ratio">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop" alt="DDoS Security">
+            <article class="project-card reveal reveal-delay-1" style="cursor:default;">
+                <div class="image-aspect-ratio" style="cursor:pointer;" onclick="window.open('veille.pdf','_blank')">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop" alt="DDoS Security">
+                </div>
+                <div class="project-info">
+                    <h3>SUJET : LES ATTAQUES DDOS & INFRASTRUCTURES</h3>
+                    <p class="project-tags">[SÉCURITÉ] [BOTNETS] [CLOUD ARMOR] [WAF]</p>
+                    <p style="margin-top:10px; font-size:12px; opacity:0.8; text-transform: none;">
+                        <strong>Problématique :</strong> Comment les attaques DDoS évoluent-elles face aux stratégies de défense ?<br>
+                        <strong>Contexte :</strong> Hausse record des attaques en 2025.<br>
+                        <strong>Solutions :</strong> Pare-feu, WAF, CDN (Cloudflare) et supervision.
+                    </p>
+                    <div class="btn-row">
+                        <a href="veille.pdf" target="_blank" rel="noopener noreferrer" class="project-tags" style="color:#555; text-decoration:none;">VOIR LA VEILLE (PDF)</a>
+                        <span class="sep-bar">|</span>
+                        <button class="btn-simu" onclick="openSim()">⚡ SIMULATION DDOS</button>
                     </div>
-                    <div class="project-info">
-                        <h3>SUJET : LES ATTAQUES DDOS & INFRASTRUCTURES</h3>
-                        <p class="project-tags">[SÉCURITÉ] [BOTNETS] [CLOUD ARMOR] [WAF]</p>
-                        <p style="margin-top:10px; font-size:12px; opacity:0.8; text-transform: none;">
-                            <strong>Problématique :</strong> Comment les attaques DDoS évoluent-elles face aux stratégies de défense ?<br>
-                            <strong>Contexte :</strong> Hausse record des attaques en 2025.<br>
-                            <strong>Solutions :</strong> Pare-feu, WAF, CDN (Cloudflare) et supervision.
-                        </p>
-                        <p class="project-tags" style="margin-top:10px; color:#555;">VOIR LA VEILLE (PDF)</p>
-                    </div>
-                </a>
+                </div>
             </article>
         </div>
     </section>
 
+    <!-- ===== CERTIFICATIONS ===== -->
     <section id="certifs" class="exam-section">
         <div class="section-title reveal">CERTIFICATIONS</div>
         <div class="projects-grid">
@@ -645,9 +940,7 @@
                 <div class="project-info">
                     <h3>ANSSI - EBIOS RISK MANAGER</h3>
                     <p class="project-tags">[ANSSI] [MOOC] [GESTION RISQUES]</p>
-                    <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
-                        Obtenu le 30/10/2025.
-                    </p>
+                    <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">Obtenu le 30/10/2025.</p>
                 </div>
             </article>
 
@@ -656,9 +949,7 @@
                 <div class="project-info">
                     <h3>CISCO - INTRO TO CYBERSECURITY</h3>
                     <p class="project-tags">[CISCO] [NETACAD] [SÉCURITÉ]</p>
-                    <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">
-                        Obtenu le 28/04/2025.
-                    </p>
+                    <p style="margin-top:10px; font-size:11px; opacity:0.8; text-transform: none;">Obtenu le 28/04/2025.</p>
                 </div>
             </article>
 
@@ -671,10 +962,8 @@
 
         <div class="reveal reveal-delay-1">
             <div class="synthese-card">
-
                 <div class="synthese-header">
                     <div class="synthese-icon">
-                        <!-- Icône "document liste" -->
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14 2H6C4.9 2 4 2.9 4 4v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                         </svg>
@@ -684,7 +973,6 @@
                         <p>SESSION 2026 — AMAVI Wesley — N° candidat : 2542532545 — INSTA Paris — Option SISR</p>
                     </div>
                 </div>
-
                 <div class="synthese-body">
                     <div class="synthese-badges">
                         <span class="badge">[BTS SIO]</span>
@@ -701,11 +989,11 @@
                         OUVRIR LE PDF
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
 
+    <!-- ===== CONTACT ===== -->
     <section id="contact" class="exam-section">
         <div class="section-title reveal">ME CONTACTER</div>
         <div class="reveal reveal-delay-1">
@@ -734,12 +1022,14 @@
     </a>
 
     <script>
+        // ── Scroll progress ──────────────────────────────────────────
         const progressBar = document.getElementById('scroll-progress');
         window.addEventListener('scroll', () => {
             const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             progressBar.style.width = pct + '%';
         });
 
+        // ── Reveal on scroll ────────────────────────────────────────
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -748,8 +1038,185 @@
                 }
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // ── SIMULATION ───────────────────────────────────────────────
+        const simState = {
+            phase: 'idle',   // idle | attack | defend | safe
+            traffic: 0,
+            cpu: 0,
+            uptime: 100,
+            attackInterval: null,
+            defenseStep: 0,
+        };
+
+        function openSim() {
+            document.getElementById('sim-overlay').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeSim() {
+            document.getElementById('sim-overlay').classList.remove('open');
+            document.body.style.overflow = '';
+            resetSim();
+        }
+        // Close on backdrop click
+        document.getElementById('sim-overlay').addEventListener('click', function(e) {
+            if (e.target === this) closeSim();
+        });
+
+        // ── Logging ─────────────────────────────────────────────────
+        function log(type, msg) {
+            const box = document.getElementById('sim-log');
+            const now = new Date().toTimeString().slice(0,8);
+            const div = document.createElement('div');
+            div.className = 'sim-log-line';
+            div.innerHTML = `<span class="ts">${now}</span><span class="tag ${type}">[${type.toUpperCase()}]</span><span class="msg">${msg}</span>`;
+            box.insertBefore(div, box.firstChild);
+        }
+
+        // ── Update metrics UI ────────────────────────────────────────
+        function updateUI() {
+            const t = Math.round(simState.traffic);
+            const c = Math.round(simState.cpu);
+            const u = Math.round(simState.uptime * 10) / 10;
+
+            // Traffic
+            document.getElementById('m-traffic').innerHTML = t + ' <span class="sim-metric-unit">Mbps</span>';
+            const tBar = document.getElementById('bar-traffic');
+            tBar.style.width = Math.min(100, t / 10) + '%';
+            tBar.style.background = t > 600 ? '#ff3333' : t > 300 ? '#ffaa00' : '#555';
+            const tEl = document.getElementById('m-traffic');
+            tEl.className = 'sim-metric-value' + (t > 600 ? ' red' : t > 300 ? ' amber' : '');
+
+            // CPU
+            document.getElementById('m-cpu').innerHTML = c + ' <span class="sim-metric-unit">%</span>';
+            const cBar = document.getElementById('bar-cpu');
+            cBar.style.width = c + '%';
+            cBar.style.background = c > 80 ? '#ff3333' : c > 50 ? '#ffaa00' : '#555';
+            const cEl = document.getElementById('m-cpu');
+            cEl.className = 'sim-metric-value' + (c > 80 ? ' red' : c > 50 ? ' amber' : '');
+
+            // Uptime
+            document.getElementById('m-uptime').innerHTML = u + ' <span class="sim-metric-unit">%</span>';
+            const uBar = document.getElementById('bar-uptime');
+            uBar.style.width = u + '%';
+            uBar.style.background = u < 70 ? '#ff3333' : u < 90 ? '#ffaa00' : '#00cc66';
+            const uEl = document.getElementById('m-uptime');
+            uEl.className = 'sim-metric-value' + (u < 70 ? ' red' : u < 90 ? ' amber' : ' green');
+        }
+
+        function setStatus(phase, text) {
+            const dot  = document.getElementById('sim-status-dot');
+            const txt  = document.getElementById('sim-status-text');
+            dot.className  = phase;
+            txt.className  = phase;
+            txt.textContent = text;
+        }
+
+        // ── LAUNCH ATTACK ────────────────────────────────────────────
+        function launchAttack() {
+            if (simState.phase !== 'idle') return;
+            simState.phase = 'attack';
+
+            document.getElementById('btn-attack').disabled = true;
+            document.getElementById('btn-defend').disabled = false;
+            setStatus('attack', 'ATTAQUE EN COURS — Botnet actif — Trafic anormal détecté');
+
+            log('atk', 'Botnet déclenché — 8 412 sources compromises (IoT, PC)');
+            log('atk', 'Type : UDP Flood — Couche 3/4 — Saturation bande passante');
+            log('sys', 'Alerte Zabbix : trafic > baseline × 15 — CPU en hausse');
+
+            let ramp = 0;
+            simState.attackInterval = setInterval(() => {
+                ramp = Math.min(1, ramp + 0.025);
+                simState.traffic = 800 * ramp + (Math.random() - 0.5) * 60;
+                simState.cpu     = 10 + 85 * ramp + Math.random() * 5;
+                simState.uptime  = Math.max(55, 100 - 35 * Math.pow(ramp, 2));
+                updateUI();
+
+                // Occasional logs
+                if (Math.random() < 0.12) {
+                    const msgs = [
+                        'Pic trafic : ' + Math.round(simState.traffic) + ' Mbps',
+                        'Timeout connexions — requêtes perdues',
+                        'Table SYN saturée — ' + Math.floor(Math.random()*50000+10000) + ' half-open',
+                        'Source : ' + Math.floor(Math.random()*200+10) + '.x.x.x — ' + Math.floor(Math.random()*40+5) + ' Gbps',
+                    ];
+                    log('atk', msgs[Math.floor(Math.random() * msgs.length)]);
+                }
+            }, 150);
+        }
+
+        // ── ACTIVATE DEFENSE ─────────────────────────────────────────
+        function activateDefense() {
+            if (simState.phase !== 'attack') return;
+            simState.phase = 'defend';
+            clearInterval(simState.attackInterval);
+
+            document.getElementById('btn-defend').disabled = true;
+            setStatus('defend', 'CONTRE-MESURES ACTIVES — Filtrage en cours…');
+            log('def', '=== Activation des défenses — Approche Zero Trust ===');
+
+            const layers = [
+                { id: 'def-fw',  delay: 0,    msg: 'pfSense : blackholing des IPs sources — 3 820 paquets bloqués/s' },
+                { id: 'def-ids', delay: 1400, msg: 'Suricata IDS/IPS : détection comportementale ML activée' },
+                { id: 'def-cdn', delay: 2800, msg: 'Cloudflare Anycast : trafic distribué sur 300+ PoP mondiaux' },
+            ];
+
+            layers.forEach(layer => {
+                setTimeout(() => {
+                    const el = document.getElementById(layer.id);
+                    el.classList.add('on');
+                    el.querySelector('.sim-def-tag').textContent = 'ACTIF';
+                    log('def', layer.msg);
+                }, layer.delay);
+            });
+
+            // Gradually recover
+            let progress = 0;
+            simState.attackInterval = setInterval(() => {
+                progress += 0.018;
+                const ease = Math.min(1, progress);
+                simState.traffic = Math.max(8,  simState.traffic * (1 - 0.025 * ease));
+                simState.cpu     = Math.max(10, simState.cpu     * (1 - 0.022 * ease));
+                simState.uptime  = Math.min(100, simState.uptime + 0.25 * ease);
+                updateUI();
+
+                if (simState.traffic < 20 && simState.cpu < 15) {
+                    clearInterval(simState.attackInterval);
+                    simState.phase = 'safe';
+                    simState.traffic = 8;
+                    simState.cpu = 10;
+                    simState.uptime = 100;
+                    updateUI();
+                    setStatus('safe', 'ATTAQUE NEUTRALISÉE — Système stable — Uptime 100 %');
+                    log('def', '=== Attaque stoppée en < 80 s — Analogie : Cloudflare 5,6 Tbps jan. 2025 ===');
+                    log('sys', 'Rapport post-incident généré — Règles mises à jour');
+                }
+            }, 150);
+        }
+
+        // ── RESET ────────────────────────────────────────────────────
+        function resetSim() {
+            clearInterval(simState.attackInterval);
+            simState.phase = 'idle';
+            simState.traffic = 0;
+            simState.cpu = 0;
+            simState.uptime = 100;
+
+            document.getElementById('btn-attack').disabled = false;
+            document.getElementById('btn-defend').disabled = true;
+            setStatus('idle', 'EN ATTENTE — Cliquez sur LANCER L\'ATTAQUE');
+
+            ['def-fw','def-ids','def-cdn'].forEach(id => {
+                const el = document.getElementById(id);
+                el.classList.remove('on');
+                el.querySelector('.sim-def-tag').textContent = 'INACTIF';
+            });
+
+            document.getElementById('sim-log').innerHTML = '';
+            updateUI();
+        }
     </script>
 
 </body>
