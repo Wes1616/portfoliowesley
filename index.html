@@ -176,6 +176,7 @@
         .project-info { padding: 15px; flex-grow: 1; }
         .project-tags { margin-top: 12px; font-size: 10px; opacity: 0.8; font-weight: 700; color: #000; }
 
+        /* VEILLE SECTION */
         .veille-intro-card {
             background: #fff;
             border: var(--border-style);
@@ -230,12 +231,12 @@
         .live-tag { color: var(--accent-green); animation: blink 1.5s infinite; font-weight: 700; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-        /* CERTIFICATIONS COMPACTES */
+        /* CERTIFICATIONS ULTRA COMPACTES */
         .certif-container {
             width: 100%;
-            max-width: 500px;
-            height: 350px;
-            margin: 15px auto 10px auto;
+            max-width: 320px;
+            height: 200px;
+            margin: 10px auto 5px auto;
             background: #fff;
             border: 1px solid #eee;
             overflow: hidden;
@@ -244,6 +245,7 @@
         }
         .certif-container iframe { width: 100%; height: 100%; border: none; }
 
+        /* CONTACT FORM */
         .contact-form { 
             display: flex; 
             flex-direction: column; 
@@ -327,7 +329,7 @@
         .machine { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 5px; }
         .machine svg { width: 30px; height: 30px; fill: #444; }
         .target-server svg { width: 50px; height: 50px; fill: var(--accent-green); }
-        .target-server.under-attack svg { fill: var(--accent-red); animation: shake 0.1s infinite; }
+        .target-server.under-attack svg { fill: var(--accent-red); animation: shake 0.15s infinite; }
         
         #sim-log { 
             border: 1px solid #333; 
@@ -416,7 +418,7 @@
         </div>
     </section>
 
-    <!-- SECTION À PROPOS -->
+    <!-- SECTION À PROPOS RESTAURÉE (MAI 2026) -->
     <section id="about" class="reveal">
         <div class="about-bio border-right">
             <h3>À PROPOS</h3>
@@ -454,7 +456,6 @@
             </article>
             <article class="project-card reveal">
                 <a href="sujet2.pdf" target="_blank">
-                    <!-- Image mise à jour pour le Sujet 2 : Windows/Server Deployment -->
                     <div class="image-aspect-ratio"><img src="https://images.unsplash.com/photo-1606166325683-e6deb697d301?q=80&w=800" alt="Industrialisation WDS"></div>
                     <div class="project-info">
                         <h3>02. INDUSTRIALISATION WDS</h3>
@@ -553,9 +554,18 @@
         </div>
     </section>
 
-    <!-- SECTION VEILLE ENRICHIE (RESTAURÉE AVEC INFOS LONGUES) -->
+    <!-- SECTION VEILLE ENRICHIE -->
     <section id="veille" class="exam-section">
         <div class="section-title reveal">VEILLE TECHNOLOGIQUE : LA MENACE DDOS</div>
+        
+        <!-- NOUVELLE PARTIE : IMPACT CARRIÈRE -->
+        <div class="veille-intro-card reveal" style="border-left: 4px solid var(--accent-red);">
+            <h4>IMPACT SUR MON PROJET PROFESSIONNEL</h4>
+            <p>Mon parcours à l'INSTA et mon ambition de devenir <strong>administrateur réseau et systèmes</strong> sont intimement liés à ce sujet. J'aime résoudre des problèmes techniques concrets, et une attaque DDoS est l'un des incidents les plus brutaux à diagnostiquer en temps réel.</p>
+            <p>Maîtriser les DDoS, c'est maîtriser la <strong>gestion de crise réseau sous pression</strong>. C'est le scénario le plus formateur pour un futur SISR : il faut configurer les pare-feu, interpréter les alertes Zabbix à 3h du matin et décider en quelques secondes s'il faut activer le blackholing ou contacter le FAI.</p>
+            <p>Cette veille n'est pas un simple exercice : elle a forgé ma <strong>posture proactive</strong>. Je n'attends pas l'information, je la surveille en continu pour anticiper les menaces de demain.</p>
+        </div>
+
         <div class="veille-intro-card reveal">
             <h4>SYNTHÈSE TECHNIQUE & CONVICTIONS SISR</h4>
             <p><strong>PROBLÉMATIQUE :</strong> Comment les attaques DDoS évoluent-elles à l'ère de l'IA et de l'IoT, et quelles stratégies un technicien SISR peut-il mettre en œuvre pour protéger efficacement les infrastructures en 2026 ?</p>
@@ -621,14 +631,13 @@
         </div>
     </section>
 
-    <!-- SECTION CERTIFICATIONS (AGRANDIE ET SANS "MAI") -->
+    <!-- SECTION CERTIFICATIONS (ULTRA COMPACTE) -->
     <section id="certifications" class="exam-section">
         <div class="section-title reveal">CERTIFICATIONS</div>
         <div class="projects-grid">
             <article class="article-card reveal">
                 <div class="article-tag">ANSSI</div>
                 <div class="article-title">ANSSI - SECNUMACAD</div>
-                <p class="article-desc" style="margin-bottom:10px;">Mooc de sensibilisation à la cybersécurité validé en 2026. Fondamentaux de l'hygiène informatique.</p>
                 <div class="certif-container">
                     <iframe src="certif_anssi.pdf#toolbar=0&navpanes=0&view=FitH" title="Certificat ANSSI"></iframe>
                 </div>
@@ -638,7 +647,6 @@
             <article class="article-card reveal">
                 <div class="article-tag">CISCO</div>
                 <div class="article-title">CISCO - INTRODUCTION TO CYBERSECURITY</div>
-                <p class="article-desc" style="margin-bottom:10px;">Certification Cisco NetAcad validant les compétences de détection des menaces et de sécurisation.</p>
                 <div class="certif-container">
                     <iframe src="certif_cisco.pdf#toolbar=0&navpanes=0&view=FitH" title="Certificat Cisco"></iframe>
                 </div>
@@ -648,7 +656,6 @@
             <article class="article-card reveal">
                 <div class="article-tag">DOCKER</div>
                 <div class="article-title">LE WAGON - INTRO TO DOCKER</div>
-                <p class="article-desc" style="margin-bottom:10px;">Certification Le Wagon validant les bases de la conteneurisation et de la gestion des images Docker.</p>
                 <div class="certif-container">
                     <iframe src="certif_docker.pdf#toolbar=0&navpanes=0&view=FitH" title="Certificat Docker"></iframe>
                 </div>
@@ -657,7 +664,7 @@
         </div>
     </section>
 
-    <!-- SYNTHÈSE (BOUTON MIS À JOUR EN NOIR) -->
+    <!-- SYNTHÈSE -->
     <section id="tableau" class="exam-section">
         <div class="section-title reveal">TABLEAU DE SYNTHÈSE — E5</div>
         <div class="veille-intro-card reveal" style="display:flex; justify-content:space-between; align-items:center; padding:25px;">
@@ -714,14 +721,14 @@
     <script>
         const apiKey = ""; 
 
-        // ANALYSES TECHNIQUES MASSIVES ET DÉTAILLÉES (SANS MAI, AVEC HEURE)
+        // ANALYSES TECHNIQUES MASSIVES ET DÉTAILLÉES (MAI 2026)
         const articlesDB = [
             {
                 source: "Link11 Threat Intelligence Center n°502",
                 title: "VAGUE D'ATTAQUES UDP FRAGMENTÉES SUR LES CŒURS DE RÉSEAU 5G",
                 date: "02/05/2026",
                 time: "08:15",
-                desc: "Le rapport Link11 signale une recrudescence massive d'attaques par déni de service distribué exploitant des paquets UDP fragmentés. Contrairement aux flux standards, ces paquets obligent les équipements de sécurité périmétriques (Firewalls de couche 4) à réassembler les fragments avant analyse, ce qui sature instantanément les ressources CPU et la mémoire vive. L'attaque, pilotée par un botnet mondialisé de plus de 800 000 objets connectés (IoT), a atteint des pics records de 7.2 Tbps. Pour l'administrateur SISR, la parade repose sur le déploiement immédiat de règles BGP Flowspec au niveau des routeurs de bordure pour filtrer ces fragments malveillants avant qu'ils ne pénètrent le LAN de l'organisation. L'utilisation d'une architecture Anycast est également recommandée pour diluer la charge sur plusieurs Scrubbing Centers mondiaux."
+                desc: "Le rapport Link11 de mai 2026 signale une recrudescence massive d'attaques par déni de service distribué exploitant des paquets UDP fragmentés. Contrairement aux flux standards, ces paquets obligent les équipements de sécurité périmétriques (Firewalls de couche 4) à réassembler les fragments avant analyse, ce qui sature instantanément les ressources CPU et la mémoire vive. L'attaque, pilotée par un botnet mondialisé de plus de 800 000 objets connectés (IoT), a atteint des pics records de 7.2 Tbps. Pour l'administrateur SISR, la parade repose sur le déploiement immédiat de règles BGP Flowspec au niveau des routeurs de bordure pour filtrer ces fragments malveillants avant qu'ils ne pénètre le LAN de l'organisation. L'utilisation d'une architecture Anycast est également recommandée pour diluer la charge sur plusieurs Scrubbing Centers mondiaux."
             },
             {
                 source: "Bulletin de sécurité ANSSI-CERT-FR 2026-05",
@@ -732,45 +739,45 @@
             },
             {
                 source: "Cloudflare Global Infrastructure Report Q2-2026",
-                title: "RECORDS D'ATTAQUES SYN FLOOD NEUTRALISÉS PAR L'EDGE COMPUTING",
                 date: "02/05/2026",
                 time: "10:20",
-                desc: "Cloudflare a enregistré la plus grande vague d'attaques SYN Flood de l'histoire, ciblant les infrastructures critiques européennes. L'attaque exploite le processus de 'Three-way Handshake' du protocole TCP : le botnet envoie des millions de paquets SYN sans jamais répondre au SYN-ACK du serveur, remplissant ainsi les tables d'état du pare-feu et empêchant toute nouvelle connexion légitime. L'intégration de cookies SYN dynamiques au niveau des serveurs Edge (périphérie) permet de valider la légitimité des sources avant qu'elles n'atteignent le serveur de production. Pour les administrateurs réseau, ce cas souligne l'importance d'un monitoring SNMP strict via Zabbix pour surveiller l'état des piles TCP/IP et l'activation de mécanismes de limitation de débit (Rate Limiting) sur pfSense dès les premières millisecondes d'une anomalie détectée."
+                title: "RECORDS D'ATTAQUES SYN FLOOD NEUTRALISÉS PAR L'EDGE COMPUTING",
+                desc: "Cloudflare a enregistré en mai 2026 la plus grande vague d'attaques SYN Flood de l'histoire, ciblant les infrastructures critiques européennes. L'attaque exploite le processus de 'Three-way Handshake' du protocole TCP : le botnet envoie des millions de paquets SYN sans jamais répondre au SYN-ACK du serveur, remplissant ainsi les tables d'état du pare-feu et empêchant toute nouvelle connexion légitime. L'intégration de cookies SYN dynamiques au niveau des serveurs Edge (périphérie) permet de valider la légitimité des sources avant qu'elles n'atteignent le serveur de production. Pour les administrateurs réseau, ce cas souligne l'importance d'un monitoring SNMP proactif via Zabbix pour surveiller l'état des piles TCP/IP et l'activation de mécanismes de limitation de débit (Rate Limiting) sur pfSense dès les premières millisecondes d'une anomalie détectée."
             },
             {
                 source: "Netscout Omnis Global Threat Horizon 2026",
-                title: "RÉFLEXION DNS RÉCURSIVE : LA SATURATION SILENCIEUSE DES PME",
                 date: "02/05/2026",
                 time: "11:55",
+                title: "RÉFLEXION DNS RÉCURSIVE : LA SATURATION SILENCIEUSE DES PME",
                 desc: "L'analyse de Netscout démontre que la réflexion DNS reste le vecteur d'attaque préféré pour paralyser les réseaux des PME en 2026. En utilisant des serveurs DNS récursifs ouverts comme amplificateurs, les attaquants envoient de petites requêtes usurpant l'adresse IP de la victime. Les serveurs DNS répondent alors avec des paquets 50 à 100 fois plus volumineuses vers la cible, provoquant une congestion totale des liens de transit. Pour le technicien SISR, la mise en place d'un filtrage Egress strict (vérifier que les paquets sortants proviennent bien de son propre réseau) et la configuration de pare-feu capables de détecter les volumes DNS anormaux sont essentiels. Le rapport insiste sur la transition vers DNS-over-HTTPS (DoH) et le durcissement des zones DNS pour réduire la surface d'exposition aux abus de réflexion."
             },
             {
                 source: "Radware Security Advisory n°2026-12",
-                title: "WEB DDOS ET APIS REST : LA SATURATION DES MICRO-SERVICES CLOUD",
                 date: "02/05/2026",
                 time: "13:10",
+                title: "WEB DDOS ET APIS REST : LA SATURATION DES MICRO-SERVICES CLOUD",
                 desc: "Radware signale une augmentation drastique des attaques 'Burst DDoS' ciblant spécifiquement les APIs REST et les architectures micro-services. Ces attaques consistent en des pics de trafic massifs d'une durée extrêmement courte (moins de 30 secondes), ce qui rend toute atténuation manuelle ou réactive impossible. Le but recherché par les cybercriminels est de saturer les équilibreurs de charge (Load Balancers) et de provoquer des erreurs 502/504 en cascade. La protection de ces services web critiques en 2026 nécessite une architecture de sécurité nativement intégrée au Cloud (Scrubbing-as-a-Service) capable d'ingérer plusieurs Térabits par seconde instantanément. L'administrateur SISR doit désormais surveiller non pas seulement le volume, mais surtout la latence applicative comme indicateur de santé prioritaire."
             },
             {
                 source: "Akamai Cyber Watch Bulletin - 2026",
-                title: "HTTP/2 RAPID RESET : UNE VULNÉRABILITÉ PROTOCOLAIRE TOUJOURS ACTUELLE",
                 date: "02/05/2026",
                 time: "14:48",
+                title: "HTTP/2 RAPID RESET : UNE VULNÉRABILITÉ PROTOCOLAIRE TOUJOURS ACTUELLE",
                 desc: "Akamai rapporte de nouvelles variantes de l'attaque Rapid Reset exploitant une faille de gestion des flux dans le protocole HTTP/2. En envoyant un flux continu de requêtes immédiatement suivies d'une réinitialisation de flux (RST_STREAM), un attaquant peut forcer un serveur web à consommer 100 % de ses ressources CPU pour traiter des requêtes annulées. Un seul nœud zombie peut ainsi paralyser un serveur complet. Cette vulnérabilité de couche 7 ne nécessite pas de grands botnets pour être dévastatrice. Les équipes SISR doivent impérativement s'assurer que leurs proxies inverses (NGINX, HAProxy) et serveurs IIS/Apache sont mis à jour avec les derniers patchs de gestion des limites de flux et envisager une transition vers HTTP/3 pour bénéficier de protections natives plus robustes."
             },
             {
                 source: "Kaspersky Botnet Monitoring Q2-2026",
-                title: "ÉVOLUTION DE MIRAI : INFECTION ET EXPLOITATION DES MODEMS INDUSTRIELS 5G",
                 date: "02/05/2026",
                 time: "15:25",
+                title: "ÉVOLUTION DE MIRAI : INFECTION ET EXPLOITATION DES MODEMS INDUSTRIELS 5G",
                 desc: "Les capteurs de Kaspersky ont identifié un variant sophistiqué du malware Mirai ciblant spécifiquement les passerelles et modems industriels 5G. Contrairement aux versions précédentes limitées à la couche domestique, ce malware exploite des vulnérabilités Zero-Day pour compromettre des équipements à haute bande passante. Une fois infectées, ces machines disposent d'un débit montant (upload) colossal, permettant de lancer des attaques DDoS d'une puissance inédite avec un nombre réduit de nœuds. La segmentation réseau via VLANs et l'isolation stricte des équipements IIoT (Industrial IoT) par des règles de filtrage de couche 3 sont les seules méthodes fiables pour empêcher ces passerelles de devenir des relais d'attaque au sein du réseau de l'entreprise. L'ANSSI recommande également un inventaire proactif via GLPI pour identifier tout équipement non mis à jour."
             },
             {
                 source: "Imperva CyberEdge Global Survey 2026",
-                title: "DÉNI DE SERVICE APPLICATIF : LE DDOS COMME DIVERSION (SMOKESCREEN)",
                 date: "02/05/2026",
                 time: "16:15",
-                desc: "Imperva met en lumière une tendance tactique majeure : l'utilisation du DDoS comme simple écran de fumée (Smokescreen). Pendant que les équipes d'administration SISR sont mobilisées sous pression pour rétablir la disponibilité réseau et traiter les alertes de saturation des liens, les attaquants déclenchent en parallèle une intrusion ciblée ou une exfiltration de données sensibles. L'attaque volumétrique n'est alors qu'un bruit de fond destiné à paralyser les outils de monitoring et à saturer les journaux d'événements (logs). L'administrateur doit donc maintenir une vigilance double : tout en activant les centres de nettoyage (Scrubbing), il est impératif de continuer à surveiller les accès aux bases de données et les flux sortants suspects vers des destinations IP inconnues, afin de ne pas ignorer une compromission de données bien plus grave derrière le déni de service apparent."
+                title: "DÉNI DE SERVICE APPLICATIF : LE DDOS COMME DIVERSION (SMOKESCREEN)",
+                desc: "Imperva met en lumière une tendance tactique majeure en mai 2026 : l'utilisation du DDoS comme simple écran de fumée (Smokescreen). Pendant que les équipes d'administration SISR sont mobilisées sous pression pour rétablir la disponibilité réseau et traiter les alertes de saturation des liens, les attaquants déclenchent en parallèle une intrusion ciblée ou une exfiltration de données sensibles. L'attaque volumétrique n'est alors qu'un bruit de fond destiné à paralyser les outils de monitoring et à saturer les journaux d'événements (logs). L'administrateur doit donc maintenir une vigilance double : tout en activant les centres de nettoyage (Scrubbing), il est impératif de continuer à surveiller les accès aux bases de données et les flux sortants suspects vers des destinations IP inconnues, afin de ne pas ignorer une compromission de données bien plus grave derrière le déni de service apparent."
             }
         ];
 
@@ -841,7 +848,7 @@
                 document.getElementById('server-node').classList.remove('under-attack');
                 zombies.forEach(z => { z.querySelector('svg').style.fill = "#444"; });
                 log("RÉSULTAT : Menace neutralisée.", "#fff");
-            }, 1800);
+            }, 1000);
         }
         function resetSim() {
             clearInterval(attackInterval); isDefending = false;
