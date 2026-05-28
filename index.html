@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO | WESLEY AMAVI | SISR</title>
-
-    <!-- Google Fonts : Space Mono pour l'aspect technique SISR -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
     <style>
         :root {
             --bg-color: #F5F5F5;
@@ -22,10 +19,8 @@
             --accent-green: #00cc66;
             --card-shadow: 5px 5px 0px #000;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
@@ -37,7 +32,6 @@
             padding: 15px;
             overflow-x: hidden;
         }
-
         #scroll-progress {
             position: fixed;
             top: 0; left: 0;
@@ -47,7 +41,6 @@
             z-index: 10000;
             transition: width 0.1s linear;
         }
-
         h1 { font-size: 22px; font-weight: 700; line-height: 1.1; letter-spacing: -1px; }
         h2 { font-size: 12px; font-weight: 400; opacity: 0.8; }
         h3 { 
@@ -58,7 +51,6 @@
             display: inline-block;
             padding-bottom: 2px;
         }
-
         .section-title {
             font-size: 18px;
             font-weight: 700;
@@ -67,14 +59,11 @@
             display: inline-block;
             padding-bottom: 3px;
         }
-
         a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
         a:hover { text-decoration: line-through; opacity: 0.7; }
         ul { list-style: none; }
-
         .bold { font-weight: 700; }
         .border-right { border-right: var(--border-style); }
-
         header {
             display: flex;
             justify-content: space-between;
@@ -83,12 +72,10 @@
             border-bottom: var(--border-style);
             animation: headerSlideDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
         }
-
         @keyframes headerSlideDown {
             from { opacity: 0; transform: translateY(-15px); }
             to   { opacity: 1; transform: translateY(0); }
         }
-
         .identity-block { display: flex; align-items: center; gap: 15px; }
         .profile-picture-container {
             width: 80px;
@@ -102,7 +89,6 @@
             align-items: center;
             justify-content: center;
         }
-
         .profile-picture-container img {
             width: 100%;
             height: 100%;
@@ -111,9 +97,7 @@
             transition: all 0.4s ease;
         }
         .profile-picture-container:hover img { filter: grayscale(0%); transform: scale(1.1); }
-
         nav ul { display: flex; gap: 15px; font-weight: 700; font-size: 11px; }
-
         .tech-bar {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -121,7 +105,6 @@
             background: #fff;
         }
         .tech-item { padding: 12px; font-size: 10px; text-align: center; }
-
         #about {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -138,14 +121,12 @@
             padding-bottom: 5px;
         }
         .info-label { opacity: 0.6; font-size: 9px; margin-bottom: 2px; font-weight: 700; }
-
         .exam-section { margin-top: 60px; }
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
         }
-
         .project-card {
             border: var(--border-style);
             background: #fff;
@@ -156,7 +137,6 @@
             flex-direction: column;
         }
         .project-card:hover { transform: translateY(-5px); box-shadow: var(--card-shadow); }
-
         .image-aspect-ratio {
             width: 100%;
             height: 160px;
@@ -172,10 +152,8 @@
             transition: all 0.5s ease;
         }
         .project-card:hover .image-aspect-ratio img { filter: grayscale(0%) contrast(1); transform: scale(1.05); }
-
         .project-info { padding: 15px; flex-grow: 1; }
         .project-tags { margin-top: 12px; font-size: 10px; opacity: 0.8; font-weight: 700; color: #000; }
-
         .article-card {
             background: #fff;
             border: var(--border-style);
@@ -216,8 +194,6 @@
             text-transform: uppercase;
             color: #666;
         }
-
-        /* BOUTON TABLEAU DE SYNTHESE PREMIUM */
         .btn-synth-premium {
             display: flex;
             align-items: center;
@@ -247,11 +223,8 @@
         .btn-synth-premium:hover { color: #fff; transform: translateY(-2px); box-shadow: 4px 4px 0px #aaa; }
         .btn-synth-premium:hover::before { left: 0; }
         .btn-synth-premium svg { width: 16px; height: 16px; fill: currentColor; }
-
         .live-tag { color: var(--accent-green); animation: blink 1.5s infinite; font-weight: 700; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
-        /* CERTIFICATIONS : RÉDUCTION ÉQUILIBRÉE */
         .certif-container {
             width: 100%;
             max-width: 500px;
@@ -264,7 +237,6 @@
             justify-content: center;
         }
         .certif-container iframe { width: 100%; height: 100%; border: none; }
-
         .contact-form { 
             display: flex; 
             flex-direction: column; 
@@ -298,7 +270,6 @@
             transition: 0.3s;
         }
         .contact-form button:hover { background-color: #333; transform: translateY(-3px); }
-
         #sim-overlay { 
             display: none; 
             position: fixed; 
@@ -333,7 +304,6 @@
             cursor: pointer;
         }
         #sim-close-corner:hover { color: #fff; }
-
         #sim-visual { 
             background: #050505; 
             border: 1px solid #222; 
@@ -349,7 +319,6 @@
         .machine svg { width: 30px; height: 30px; fill: #444; }
         .target-server svg { width: 50px; height: 50px; fill: var(--accent-green); }
         .target-server.under-attack svg { fill: var(--accent-red); animation: shake 0.15s infinite; }
-        
         #sim-log { 
             border: 1px solid #333; 
             background: #000; 
@@ -364,7 +333,6 @@
         .sim-btn-attack { color: var(--accent-red); border-color: var(--accent-red); }
         .sim-btn-defend { color: var(--accent-green); border-color: var(--accent-green); }
         .sim-btn-quit { color: #888; border-color: #444; margin-top: auto; }
-
         footer { 
             border-top: var(--border-style); 
             padding: 40px 0; 
@@ -374,10 +342,8 @@
             align-items: center; 
         }
         .footer-links { display: flex; gap: 30px; }
-
         .reveal { opacity: 0; transform: translateY(20px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal.is-visible { opacity: 1; transform: translateY(0); }
-
         #typewriter-name {
             display: inline-block;
             overflow: hidden;
@@ -386,8 +352,6 @@
             animation: typing 1.2s steps(13, end) forwards;
         }
         @keyframes typing { from { width: 0; } to { width: 13ch; } }
-
-        /* STRUCTURE IMPACT PRO */
         .impact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -405,7 +369,6 @@
             margin-bottom: 10px;
             color: var(--accent-red);
         }
-
         @media (max-width: 768px) {
             header, #about, .tech-bar, #sim-modal, .impact-grid { grid-template-columns: 1fr; }
             footer { flex-direction: column; gap: 20px; text-align: center; }
@@ -592,15 +555,13 @@
         </div>
     </section>
 
-    <!-- SECTION VEILLE ENRICHIE -->
+    <!-- SECTION VEILLE -->
     <section id="veille" class="exam-section">
         <div class="section-title reveal">VEILLE TECHNOLOGIQUE : LA MENACE DDOS</div>
         
-        <!-- IMPACT PRO RESTRUCTURED SANS LIGNE ROUGE -->
         <div class="veille-intro-card reveal">
             <h4>IMPACT SUR MON PROJET PROFESSIONNEL</h4>
             <p>Mon parcours à l'INSTA et mon ambition de devenir <strong>administrateur réseau et systèmes</strong> sont intimement liés à ce sujet.</p>
-            
             <div class="impact-grid">
                 <div class="impact-item">
                     <h5>DÉFI TECHNIQUE & RÉSOLUTION</h5>
@@ -611,11 +572,9 @@
                     <p style="font-size:12px;">La cybersécurité me passionne car elle garantit la continuité d'activité. En 2026, la protection contre le <strong>Spoofing</strong> et la saturation est un enjeu vital pour toute infrastructure que je serai amené à administrer.</p>
                 </div>
             </div>
-            
             <p style="margin-top:15px;">Cette veille a forgé ma <strong>posture proactive</strong> : je ne subis pas l'incident, je l'anticipe par une surveillance constante des flux et une configuration rigoureuse des pare-feu applicatifs (<strong>WAF</strong>).</p>
         </div>
 
-        <!-- BLOC SIMULATEUR ET CONVICTIONS -->
         <div class="veille-intro-card reveal">
             <h4>SYNTHÈSE TECHNIQUE & CONVICTIONS SISR</h4>
             <p><strong>PROBLÉMATIQUE :</strong> Comment les attaques DDoS évoluent-elles à l'ère de l'IA et de l'IoT, et quelles stratégies un technicien SISR peut-il mettre en œuvre pour protéger efficacement les infrastructures en 2026 ?</p>
@@ -628,7 +587,7 @@
                 <div class="article-title">L'ARMÉE DE MACHINES ZOMBIES</div>
                 <p class="article-desc">Un <strong>Botnet</strong> est un réseau d'équipements compromis (PC, caméras IP, IoT) pilotés à distance via un serveur <strong>Command & Control (C&C)</strong>. L'attaquant utilise des protocoles comme IRC ou HTTP pour ordonner des millions de requêtes simultanées. 
                 
-                L'enjeu pour le SISR est l'identification de ces flux massifs dispersés géographiquement, rendant le blocage par adresse IP individuelle totalement inefficace face à une puissance atteignant désormais plusieurs Térabits par seconde (Tbps).</p>
+L'enjeu pour le SISR est l'identification de ces flux massifs dispersés géographiquement, rendant le blocage par adresse IP individuelle totalement inefficace face à une puissance atteignant désormais plusieurs Térabits par seconde (Tbps).</p>
                 <div class="article-footer"><span>SOURCE: DOSSIER W.A (P.3-4)</span><span>DATE : 03/05/2026</span></div>
             </article>
 
@@ -636,9 +595,9 @@
                 <div class="article-tag">MODÈLE OSI</div>
                 <div class="article-title">VECTEURS D'ATTAQUE MULTICOUCHES</div>
                 <p class="article-desc">Les attaques ciblent spécifiquement des faiblesses protocolaires :
-                • <strong>L3/4 (Volumétrique) :</strong> Inondation UDP ou amplification <strong>DNS/NTP</strong> utilisant le <strong>Spoofing</strong> (usurpation d'IP).
-                • <strong>L4 (Protocolaire) :</strong> Le <strong>SYN Flood</strong> exploite le 'Three-way Handshake' TCP en saturant la table des connexions mi-ouvertes.
-                • <strong>L7 (Applicatif) :</strong> Utilisation de <strong>WAF</strong> pour contrer le HTTP Flood qui simule des parcours utilisateurs réels pour saturer les ressources serveur.</p>
+• <strong>L3/4 (Volumétrique) :</strong> Inondation UDP ou amplification <strong>DNS/NTP</strong> utilisant le <strong>Spoofing</strong> (usurpation d'IP).
+• <strong>L4 (Protocolaire) :</strong> Le <strong>SYN Flood</strong> exploite le 'Three-way Handshake' TCP en saturant la table des connexions mi-ouvertes.
+• <strong>L7 (Applicatif) :</strong> Utilisation de <strong>WAF</strong> pour contrer le HTTP Flood qui simule des parcours utilisateurs réels pour saturer les ressources serveur.</p>
                 <div class="article-footer"><span>SOURCE: DOSSIER W.A (P.5-7)</span><span>DATE : 03/05/2026</span></div>
             </article>
 
@@ -646,14 +605,13 @@
                 <div class="article-tag">MITIGATION</div>
                 <div class="article-title">SOLUTIONS DE NETTOYAGE & ROUTAGE</div>
                 <p class="article-desc">La protection moderne repose sur des services spécialisés :
-                - <strong>Scrubbing Center :</strong> Centre de nettoyage externe qui sépare le trafic légitime du malveillant.
-                - <strong>BGP Flowspec :</strong> Extension du protocole BGP permettant de propager des règles de filtrage à l'échelle des routeurs opérateurs.
-                - <strong>Routage Anycast :</strong> Distribution de l'adresse IP cible sur plusieurs serveurs mondiaux pour diluer la charge d'attaque et maintenir la disponibilité locale.</p>
+- <strong>Scrubbing Center :</strong> Centre de nettoyage externe qui sépare le trafic légitime du malveillant.
+- <strong>BGP Flowspec :</strong> Extension du protocole BGP permettant de propager des règles de filtrage à l'échelle des routeurs opérateurs.
+- <strong>Routage Anycast :</strong> Distribution de l'adresse IP cible sur plusieurs serveurs mondiaux pour diluer la charge d'attaque et maintenir la disponibilité locale.</p>
                 <div class="article-footer"><span>SOURCE: DOSSIER W.A (P.8-11)</span><span>DATE : 03/05/2026</span></div>
             </article>
         </div>
 
-        <!-- CAS RÉEL : PLUS GRANDE ATTAQUE DDOS DE L'HISTOIRE -->
         <div class="section-title reveal" style="font-size:16px; margin-top:50px;">⚠️ CAS RÉEL : L'ATTAQUE LA PLUS PUISSANTE DE L'HISTOIRE</div>
         <article class="article-card reveal" style="border-left: 4px solid var(--accent-red); background: #fff;">
             <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
@@ -687,7 +645,7 @@ Face à cet incident, les mesures défensives côté administrateur SISR auraien
         </div>
     </section>
 
-    <!-- SOURCES & RÉFÉRENCES -->
+    <!-- SOURCES -->
     <section id="sources" class="exam-section">
         <div class="section-title reveal">SOURCES ET RÉFÉRENCES DE MA VEILLE</div>
         <div class="veille-intro-card reveal">
@@ -708,36 +666,50 @@ Face à cet incident, les mesures défensives côté administrateur SISR auraien
         </div>
     </section>
 
-    <!-- SECTION CERTIFICATIONS -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- SECTION CERTIFICATIONS — 4 CERTIFS               -->
+    <!-- ═══════════════════════════════════════════════════ -->
     <section id="certifications" class="exam-section">
         <div class="section-title reveal">CERTIFICATIONS</div>
         <div class="projects-grid">
+
             <article class="article-card reveal">
                 <div class="article-tag">ANSSI</div>
-                <div class="article-title">ANSSI - SECNUMACAD</div>
+                <div class="article-title">ANSSI — EBIOS RISK MANAGER</div>
                 <div class="certif-container">
                     <iframe src="certif_anssi.pdf#toolbar=0&navpanes=0&view=FitH" title="Certificat ANSSI"></iframe>
                 </div>
-                <div class="article-footer"><span>ANALYSE WESLEY AMAVI</span><span>2026</span></div>
+                <div class="article-footer"><span>ANALYSE WESLEY AMAVI</span><span>OCT. 2025</span></div>
             </article>
 
             <article class="article-card reveal">
                 <div class="article-tag">CISCO</div>
-                <div class="article-title">CISCO - INTRODUCTION TO CYBERSECURITY</div>
+                <div class="article-title">CISCO — INTRODUCTION TO CYBERSECURITY</div>
                 <div class="certif-container">
-                    <iframe src="certif_cisco.pdf#toolbar=0&navpanes=0&view=FitH" title="Certificat Cisco"></iframe>
+                    <iframe src="certif_cisco.pdf#toolbar=0&navpanes=0&view=FitH" title="Certificat Cisco Cybersecurity"></iframe>
                 </div>
-                <div class="article-footer"><span>ANALYSE WESLEY AMAVI</span><span>2026</span></div>
+                <div class="article-footer"><span>ANALYSE WESLEY AMAVI</span><span>AVR. 2025</span></div>
             </article>
 
             <article class="article-card reveal">
                 <div class="article-tag">DOCKER</div>
-                <div class="article-title">LE WAGON - INTRO TO DOCKER</div>
+                <div class="article-title">LE WAGON — INTRO TO DOCKER</div>
                 <div class="certif-container">
                     <iframe src="certif_docker.pdf#toolbar=0&navpanes=0&view=FitH" title="Certificat Docker"></iframe>
                 </div>
-                <div class="article-footer"><span>ANALYSE WESLEY AMAVI</span><span>2026</span></div>
+                <div class="article-footer"><span>ANALYSE WESLEY AMAVI</span><span>MAI 2026</span></div>
             </article>
+
+            <!-- ✦ NOUVELLE CERTIF CISCO APPLY AI ✦ -->
+            <article class="article-card reveal">
+                <div class="article-tag">CISCO — IA</div>
+                <div class="article-title">CISCO — APPLY AI : ANALYZE CUSTOMER REVIEWS</div>
+                <div class="certif-container">
+                    <iframe src="certif_cisco2.pdf#toolbar=0&navpanes=0&view=FitH" title="Certificat Cisco Apply AI"></iframe>
+                </div>
+                <div class="article-footer"><span>ANALYSE WESLEY AMAVI</span><span>MAI 2026</span></div>
+            </article>
+
         </div>
     </section>
 
@@ -801,64 +773,64 @@ Face à cet incident, les mesures défensives côté administrateur SISR auraien
     </div>
 
     <script>
-        const apiKey = ""; 
-
-        // GOOGLE ALERTS — FLUX DDoS — 03 MAI AU 04 MAI 2026 (avant 09:00)
+        // ═══════════════════════════════════════════════════
+        // VEILLE — 8 ARTICLES — 29 MAI 2026 — AVANT 08:00
+        // ═══════════════════════════════════════════════════
         const articlesDB = [
             {
-                source: "Link11 Threat Intelligence Center n°502",
+                source: "Link11 Threat Intelligence Center n°503",
                 title: "VAGUE D'ATTAQUES UDP FRAGMENTÉES SUR LES CŒURS DE RÉSEAU 5G",
-                date: "03/05/2026",
-                time: "07:12",
+                date: "29/05/2026",
+                time: "01:14",
                 desc: "Le rapport Link11 de mai 2026 signale une recrudescence massive d'attaques par déni de service distribué exploitant des paquets UDP fragmentés. Contrairement aux flux standards, ces paquets obligent les équipements de sécurité périmétriques (Firewalls de couche 4) à réassembler les fragments avant analyse, ce qui sature instantanément les ressources CPU et la mémoire vive. L'attaque a atteint des pics records de 7.2 Tbps. Pour l'administrateur SISR, la parade repose sur le déploiement immédiat de règles BGP Flowspec au niveau des routeurs de bordure pour filtrer ces fragments malveillants avant qu'ils ne pénètrent le LAN."
             },
             {
                 source: "Bulletin de sécurité ANSSI-CERT-FR 2026-05",
                 title: "MENACE CRITIQUE : BOTNETS POLYMORPHES ASSISTÉS PAR IA GÉNÉRATIVE",
-                date: "03/05/2026",
-                time: "09:47",
+                date: "29/05/2026",
+                time: "02:03",
                 desc: "L'ANSSI alerte sur l'émergence d'une nouvelle génération de botnets utilisant des algorithmes d'Intelligence Artificielle pour modifier dynamiquement leur comportement en temps réel. Ces requêtes HTTP Flood de couche 7 sont conçues pour imiter parfaitement la navigation d'un utilisateur réel (délais aléatoires, parcours de pages cohérents, en-têtes User-Agent valides). Cette technique rend les Web Application Firewalls (WAF) basés sur des signatures statiques totalement inopérantes. Pour un technicien SISR, la défense nécessite désormais l'implémentation de solutions de détection comportementale basées sur le Machine Learning."
             },
             {
                 source: "Cloudflare Global Infrastructure Report Q2-2026",
-                date: "03/05/2026",
-                time: "11:33",
                 title: "RECORDS D'ATTAQUES SYN FLOOD NEUTRALISÉS PAR L'EDGE COMPUTING",
+                date: "29/05/2026",
+                time: "02:51",
                 desc: "Cloudflare a enregistré en mai 2026 la plus grande vague d'attaques SYN Flood de l'histoire, ciblant les infrastructures critiques européennes. L'attaque exploite le processus de 'Three-way Handshake' du protocole TCP : le botnet envoie des millions de paquets SYN sans jamais répondre au SYN-ACK du serveur, remplissant ainsi les tables d'état du pare-feu et empêchant toute nouvelle connexion légitime. L'intégration de cookies SYN dynamiques au niveau des serveurs Edge permet de valider la légitimité des sources avant qu'elles n'atteignent le serveur de production."
             },
             {
                 source: "Netscout Omnis Global Threat Horizon 2026",
-                date: "03/05/2026",
-                time: "13:58",
                 title: "RÉFLEXION DNS RÉCURSIVE : LA SATURATION SILENCIEUSE DES PME",
+                date: "29/05/2026",
+                time: "03:38",
                 desc: "L'analyse de Netscout démontre que la réflexion DNS reste le vecteur d'attaque préféré pour paralyser les réseaux des PME en 2026. En utilisant des serveurs DNS récursifs ouverts comme amplificateurs, les attaquants envoient de petites requêtes usurpant l'adresse IP de la victime. Les serveurs DNS répondent alors avec des paquets 50 à 100 fois plus volumineuses vers la cible, provoquant une congestion totale des liens de transit. Pour le technicien SISR, la mise en place d'un filtrage Egress strict et la configuration de pare-feu capables de détecter les volumes DNS anormaux sont essentiels."
             },
             {
                 source: "Radware Security Advisory n°2026-12",
-                date: "03/05/2026",
-                time: "16:21",
                 title: "WEB DDOS ET APIS REST : LA SATURATION DES MICRO-SERVICES CLOUD",
+                date: "29/05/2026",
+                time: "04:22",
                 desc: "Radware signale une augmentation drastique des attaques 'Burst DDoS' ciblant spécifiquement les APIs REST et les architectures micro-services. Ces attaques consistent en des pics de trafic massifs d'une durée extrêmement courte (moins de 30 secondes), ce qui rend toute atténuation manuelle ou réactive impossible. Le but recherché par les cybercriminels est de saturer les équilibreurs de charge (Load Balancers) et de provoquer des erreurs 502/504 en cascade. La protection de ces services web critiques en 2026 nécessite une architecture de sécurité nativement intégrée au Cloud (Scrubbing-as-a-Service) capable d'ingérer plusieurs Térabits par seconde instantanément."
             },
             {
-                source: "Akamai Cyber Watch Bulletin - 2026",
-                date: "03/05/2026",
-                time: "19:05",
+                source: "Akamai Cyber Watch Bulletin — 2026",
                 title: "HTTP/2 RAPID RESET : UNE VULNÉRABILITÉ PROTOCOLAIRE TOUJOURS ACTUELLE",
+                date: "29/05/2026",
+                time: "05:17",
                 desc: "Akamai rapporte de nouvelles variantes de l'attaque Rapid Reset exploitant une faille de gestion des flux dans le protocole HTTP/2. En envoyant un flux continu de requêtes immédiatement suivies d'une réinitialisation de flux (RST_STREAM), un attaquant peut forcer un serveur web à consommer 100 % de ses ressources CPU pour traiter des requêtes annulées. Un seul nœud zombie peut ainsi paralyser un serveur complet. Cette vulnérabilité de couche 7 ne nécessite pas de grands botnets pour être dévastatrice. Les équipes SISR doivent impérativement s'assurer que leurs proxies inverses (NGINX, HAProxy) sont mis à jour avec les derniers patchs."
             },
             {
                 source: "Kaspersky Botnet Monitoring Q2-2026",
-                date: "03/05/2026",
-                time: "22:44",
                 title: "ÉVOLUTION DE MIRAI : INFECTION ET EXPLOITATION DES MODEMS INDUSTRIELS 5G",
+                date: "29/05/2026",
+                time: "06:44",
                 desc: "Les capteurs de Kaspersky ont identifié un variant sophistiqué du malware Mirai ciblant spécifiquement les passerelles et modems industriels 5G. Contrairement aux versions précédentes limitées à la couche domestique, ce malware exploite des vulnérabilités Zero-Day pour compromettre des équipements à haute bande passante. Une fois infectées, ces machines disposent d'un débit montant (upload) colossal, permettant de lancer des attaques DDoS d'une puissance inédite avec un nombre réduit de nœuds. La segmentation réseau via VLANs et l'isolation stricte des équipements IIoT (Industrial IoT) par des règles de filtrage de couche 3 sont les seules méthodes fiables."
             },
             {
                 source: "Imperva CyberEdge Global Survey 2026",
-                date: "04/05/2026",
-                time: "08:37",
                 title: "DÉNI DE SERVICE APPLICATIF : LE DDOS COMME DIVERSION (SMOKESCREEN)",
+                date: "29/05/2026",
+                time: "07:29",
                 desc: "Imperva met en lumière une tendance tactique majeure en mai 2026 : l'utilisation du DDoS comme simple écran de fumée (Smokescreen). Pendant que les équipes d'administration SISR sont mobilisées sous pression pour rétablir la disponibilité réseau et traiter les alertes de saturation des liens, les attaquants déclenchent en parallèle une intrusion ciblée ou une exfiltration de données sensibles. L'attaque volumétrique n'est alors qu'un bruit de fond destiné à paralyser les outils de monitoring et à saturer les journaux d'événements (logs). L'administrateur doit donc maintenir une vigilance double : tout en activant les centres de nettoyage (Scrubbing), il est impératif de continuer à surveiller les accès aux bases de données."
             }
         ];
@@ -875,6 +847,7 @@ Face à cet incident, les mesures défensives côté administrateur SISR auraien
             `).join('');
         }
 
+        // SIMULATEUR
         const visual = document.getElementById('sim-visual');
         const zombies = [];
         for (let i = 0; i < 8; i++) {
