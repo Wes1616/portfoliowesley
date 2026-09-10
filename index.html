@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO | WESLEY AMAVI | SISR</title>
+    <title>PORTFOLIO | WESLEY AMAVI | CYBERSÉCURITÉ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -165,6 +165,64 @@
             text-transform: none;
             grid-column: 1 / -1;
         }
+        .news-card {
+            background: #fff;
+            border: var(--border-style);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: all 0.2s ease;
+            text-transform: none;
+        }
+        .news-card:hover { transform: translateY(-3px); box-shadow: 6px 6px 0px #000; }
+        .news-card .article-tag { font-size: 8px; }
+        .news-card .article-title { font-size: 12.5px; padding-bottom: 8px; }
+        .news-card .article-desc { font-size: 11px; line-height: 1.6; }
+        .veille-intro-card {
+            background: #fff;
+            border: var(--border-style);
+            padding: 25px 30px;
+            text-transform: none;
+            margin-bottom: 25px;
+        }
+        .veille-intro-card p { font-size: 13px; line-height: 1.7; }
+        .profil-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 25px;
+            margin-top: 25px;
+        }
+        .skills-grid { display: flex; flex-direction: column; gap: 10px; }
+        .skill-row {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 12px;
+            font-size: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #f0f0f0;
+            text-transform: none;
+        }
+        .skill-label { font-weight: 700; text-transform: uppercase; font-size: 10px; opacity: 0.6; }
+        .timeline-item { margin-bottom: 20px; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+        .timeline-sub { font-size: 11px; opacity: 0.6; margin-bottom: 8px; text-transform: none; }
+        .timeline-list { list-style: none; padding-left: 0; }
+        .timeline-list li {
+            font-size: 12px;
+            text-transform: none;
+            padding-left: 14px;
+            position: relative;
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+        .timeline-list li::before { content: '→'; position: absolute; left: 0; opacity: 0.5; }
         .article-card:hover { transform: translateY(-3px); box-shadow: 6px 6px 0px #000; }
         .article-tag {
             font-size: 9px;
@@ -223,8 +281,6 @@
         .btn-synth-premium:hover { color: #fff; transform: translateY(-2px); box-shadow: 4px 4px 0px #aaa; }
         .btn-synth-premium:hover::before { left: 0; }
         .btn-synth-premium svg { width: 16px; height: 16px; fill: currentColor; }
-        .live-tag { color: var(--accent-green); animation: blink 1.5s infinite; font-weight: 700; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
         .certif-container {
             width: 100%;
             max-width: 500px;
@@ -370,10 +426,11 @@
             color: var(--accent-red);
         }
         @media (max-width: 768px) {
-            header, #about, .tech-bar, #sim-modal, .impact-grid { grid-template-columns: 1fr; }
+            header, #about, .tech-bar, #sim-modal, .impact-grid, .profil-grid { grid-template-columns: 1fr; }
             footer { flex-direction: column; gap: 20px; text-align: center; }
             .footer-links { flex-direction: column; gap: 12px; }
             #sim-visual { height: 250px; }
+            .skill-row { grid-template-columns: 1fr; gap: 3px; }
         }
     </style>
 </head>
@@ -388,15 +445,16 @@
             </div>
             <div>
                 <h1><span id="typewriter-name">WESLEY AMAVI</span></h1>
-                <h2>BTS SIO • OPTION SISR</h2>
+                <h2>ADMINISTRATEUR SYSTÈMES, RÉSEAUX & SÉCURITÉ EN ALTERNANCE</h2>
             </div>
         </div>
         <nav>
             <ul style="list-style:none;">
                 <li><a href="#about">À PROPOS</a></li>
+                <li><a href="#profil">PROFIL</a></li>
                 <li><a href="#e5">E5</a></li>
                 <li><a href="#e6">E6</a></li>
-                <li><a href="#veille">VEILLE DDOS</a></li>
+                <li><a href="#veille">VEILLE</a></li>
                 <li><a href="#certifications">CERTIFICATIONS</a></li>
                 <li><a href="#tableau">SYNTHÈSE</a></li>
                 <li><a href="#contact">CONTACT</a></li>
@@ -407,15 +465,15 @@
     <section class="tech-bar bold">
         <div class="tech-item border-right">
             <span style="opacity:0.5; display:block; font-size:8px; margin-bottom:3px;">[STATUT]</span>
-            ÉTUDIANT SISR - 2ÈME ANNÉE
+            BACHELOR CYBERSÉCURITÉ - 3ÈME ANNÉE (ALTERNANCE)
         </div>
         <div class="tech-item border-right">
             <span style="opacity:0.5; display:block; font-size:8px; margin-bottom:3px;">[OS PRINCIPAL]</span>
-            DEBIAN 12 / WINDOWS SERVER 2022
+            DEBIAN / KALI / WINDOWS SERVER
         </div>
         <div class="tech-item">
-            <span style="opacity:0.5; display:block; font-size:8px; margin-bottom:3px;">[RÉSEAU]</span>
-            CISCO IOS / SÉCURITÉ INFRAS
+            <span style="opacity:0.5; display:block; font-size:8px; margin-bottom:3px;">[RÉSEAU & SÉCU]</span>
+            CISCO IOS / PFSENSE / WAZUH SIEM
         </div>
     </section>
 
@@ -424,20 +482,91 @@
         <div class="about-bio border-right">
             <h3>À PROPOS</h3>
             <p>
-                Actuellement étudiant en deuxième année de BTS SIO (Services Informatiques aux Organisations) – option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) à l'Insta Paris. Passionné par l'informatique et les nouvelles technologies.
+                BTS SIO SISR (Solutions d'Infrastructure, Systèmes et Réseaux) validé, je poursuis désormais en Bachelor Cybersécurité — Administrateur d'Infrastructures Sécurisées (RNCP Niv. 6) en alternance à l'INSTA CFA Paris, sur un rythme de 3 semaines en entreprise / 1 semaine à l'école.
             </p>
             <p>
-                Après 2024, j'ai choisi cette formation afin de développer mes compétences en administration des systèmes et réseaux, tout en approfondissant mes connaissances sur les infrastructures IT en vue de mon diplôme en 2026.
+                Autonome et rigoureux, je pratique activement sur mon temps libre via mon lab personnel <strong>WES CLOUD</strong>, où j'expérimente virtualisation, supervision et durcissement d'infrastructures. Je consolide aujourd'hui mes bases systèmes, réseaux et sécurité en conditions réelles.
             </p>
         </div>
         <div class="about-info">
             <h3>INFORMATIONS</h3>
             <ul>
-                <li><span class="info-label">📍 ÉCOLE</span><span>Insta - Paris (75)</span></li>
-                <li><span class="info-label">🎓 DIPLÔME</span><span>BTS SIO (2024 - 2026)</span></li>
+                <li><span class="info-label">📍 ÉCOLE</span><span>Insta CFA - Paris (75010)</span></li>
+                <li><span class="info-label">🎓 FORMATION ACTUELLE</span><span>Bachelor Cybersécurité RNCP N.6 (2026 - 2027)</span></li>
+                <li><span class="info-label">✅ DIPLÔME OBTENU</span><span>BTS SIO SISR (2024 - 2026)</span></li>
                 <li><span class="info-label">📞 TÉLÉPHONE</span><span>07 67 75 35 41</span></li>
                 <li><span class="info-label">📧 EMAIL</span><a href="mailto:wesley.amv16@gmail.com">wesley.amv16@gmail.com</a></li>
             </ul>
+        </div>
+    </section>
+
+    <!-- SECTION PROFIL : COMPÉTENCES & EXPÉRIENCE -->
+    <section id="profil" class="exam-section">
+        <div class="section-title reveal">PROFIL PROFESSIONNEL</div>
+
+        <div class="veille-intro-card reveal">
+            <h3 style="border:none; margin-bottom:8px;">COMPÉTENCES PROFESSIONNELLES</h3>
+            <div class="skills-grid">
+                <div class="skill-row"><span class="skill-label">CLOUD & VIRTUALISATION</span><span class="skill-value">VMware Workstation Pro, ESXi, Docker, VMs Windows/Linux, GitHub Pages</span></div>
+                <div class="skill-row"><span class="skill-label">SÉCURITÉ</span><span class="skill-value">pfSense, Wazuh (SIEM), Bitwarden, Duplicati, RustDesk, EBIOS RM, Zero Trust, ACL, pare-feu</span></div>
+                <div class="skill-row"><span class="skill-label">ADMIN. SYSTÈMES</span><span class="skill-value">Windows Server (AD, GPO, NTFS, FSRM), Linux Debian/Ubuntu/Kali/Alma/Fedora</span></div>
+                <div class="skill-row"><span class="skill-label">ADMIN. RÉSEAUX</span><span class="skill-value">VLAN, NAT/PAT, ACL, HSRP, LACP, STP, VPN, Wi-Fi, DHCP, TCP/IP, Cisco, SSH/Telnet</span></div>
+                <div class="skill-row"><span class="skill-label">SCRIPTING</span><span class="skill-value">Python/Netmiko, Bash, Git, Wireshark, Cisco Packet Tracer, VS Code</span></div>
+                <div class="skill-row"><span class="skill-label">SERVICES</span><span class="skill-value">Apache2, SSH, NTP, NFS, Syslog UDP 514, SNMP, DNS, Proxy</span></div>
+                <div class="skill-row"><span class="skill-label">SUPERVISION & ITSM</span><span class="skill-value">GLPI, OCS Inventory, Zabbix, OpenLDAP, tableaux de bord réseau</span></div>
+            </div>
+        </div>
+
+        <div class="profil-grid reveal">
+            <div class="veille-intro-card">
+                <h3 style="border:none; margin-bottom:15px;">EXPÉRIENCES PROFESSIONNELLES</h3>
+                <div class="timeline-item">
+                    <div class="timeline-meta"><span class="bold">TECHNICIEN INFORMATIQUE</span><span>2026 · 6 SEM. · PARIS</span></div>
+                    <p class="timeline-sub">Réparation Phone</p>
+                    <ul class="timeline-list">
+                        <li>Déploiement réseau complet : RJ45, switch, Wi-Fi, routeur, postes et périphériques</li>
+                        <li>Installation Windows 10/11 via USB bootable, configuration postes et profils utilisateurs</li>
+                        <li>Câblage et sertissage RJ45, configuration équipements actifs et connectique réseau</li>
+                        <li>Support utilisateurs, configuration logiciels métier et assistance technique</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-meta"><span class="bold">TECHNICIEN SUPPORT & RÉSEAUX</span><span>2025 · 5 SEM. · PARIS</span></div>
+                    <p class="timeline-sub">Cardinal Multiservices</p>
+                    <ul class="timeline-list">
+                        <li>Configuration postes Windows 10, intégration imprimantes et scanners en réseau</li>
+                        <li>Sertissage RJ45/RJ11, configuration routeurs Cisco et box Orange sur site client</li>
+                        <li>Sécurisation de postes : Avast, vérification système, mises à jour</li>
+                        <li>Support et conseil client sur les solutions informatiques adaptées</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="veille-intro-card">
+                <h3 style="border:none; margin-bottom:15px;">ATOUTS & LANGUES</h3>
+                <p class="info-label" style="margin-bottom:6px;">ATOUTS</p>
+                <p style="text-transform:none; font-size:12px; margin-bottom:16px;">Autonome & rigoureux · Esprit d'initiative · Force de proposition · Capacité d'adaptation · Ponctuel</p>
+                <p class="info-label" style="margin-bottom:6px;">LANGUES</p>
+                <p style="text-transform:none; font-size:12px; margin-bottom:16px;">Français — natif · Anglais — B2 · Espagnol — B1</p>
+                <p class="info-label" style="margin-bottom:6px;">LOISIRS</p>
+                <p style="text-transform:none; font-size:12px; margin-bottom:16px;">Cybersécurité & veille · Entrepreneuriat · Fitness & nutrition · PC Gaming</p>
+                <p class="info-label" style="margin-bottom:6px;">BÉNÉVOLAT</p>
+                <p style="text-transform:none; font-size:12px;">APART — sport & insertion (escalade, running) · APART Outdoor — trail & activités nature</p>
+            </div>
+        </div>
+
+        <div class="veille-intro-card reveal" style="margin-top:25px;">
+            <h3 style="border:none; margin-bottom:15px;">PROJETS PERSONNELS — LAB WES CLOUD (2026)</h3>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h5 style="color:#000;">INFRASTRUCTURE RÉSEAU & SÉCURITÉ</h5>
+                    <p style="font-size:12px;">Cisco 2901 & Catalyst 2960 : VLAN 10/11, Router-on-a-Stick, DHCP, NAT/PAT, ACLs, HSRP, LACP. pfSense : pare-feu, NAT, ACL, Syslog UDP 514, NTP, NFS — Wazuh SIEM sur VMware. Active Directory, GPO, NTFS/FSRM — automatisation Python/Netmiko & Bash + cron.</p>
+                </div>
+                <div class="impact-item">
+                    <h5 style="color:#000;">ADMINISTRATION GLPI & SUPERVISION PARC</h5>
+                    <p style="font-size:12px;">GLPI 11 sur Debian 12 (Apache2, MariaDB) — agents Windows/Linux, OCS Inventory, OpenLDAP. Supervision SNMP Zabbix, alertes réseau — sauvegarde auto de la base GLPI via Bash + cron. Déploiement Duplicati (sauvegardes chiffrées), Bitwarden self-hosted, RustDesk (téléassistance). Versioning Git, documentation technique via GitHub Pages.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -557,92 +686,64 @@
 
     <!-- SECTION VEILLE -->
     <section id="veille" class="exam-section">
-        <div class="section-title reveal">VEILLE TECHNOLOGIQUE : LA MENACE DDOS</div>
-        
+        <div class="section-title reveal">VEILLE TECHNOLOGIQUE — LA MENACE DDOS</div>
+
         <div class="veille-intro-card reveal">
-            <h4>IMPACT SUR MON PROJET PROFESSIONNEL</h4>
-            <p>Mon parcours à l'INSTA et mon ambition de devenir <strong>administrateur réseau et systèmes</strong> sont intimement liés à ce sujet.</p>
-            <div class="impact-grid">
-                <div class="impact-item">
-                    <h5>DÉFI TECHNIQUE & RÉSOLUTION</h5>
-                    <p style="font-size:12px;">Une attaque DDoS est l'un des incidents les plus brutaux à diagnostiquer. Maîtriser les outils comme <strong>Zabbix</strong> pour la détection ou <strong>pfSense</strong> pour le blocage est une compétence que je souhaite placer au cœur de mon expertise.</p>
-                </div>
-                <div class="impact-item">
-                    <h5>SÉCURITÉ & DISPONIBILITÉ</h5>
-                    <p style="font-size:12px;">La cybersécurité me passionne car elle garantit la continuité d'activité. En 2026, la protection contre le <strong>Spoofing</strong> et la saturation est un enjeu vital pour toute infrastructure que je serai amené à administrer.</p>
-                </div>
-            </div>
-            <p style="margin-top:15px;">Cette veille a forgé ma <strong>posture proactive</strong> : je ne subis pas l'incident, je l'anticipe par une surveillance constante des flux et une configuration rigoureuse des pare-feu applicatifs (<strong>WAF</strong>).</p>
+            <p><strong>Problématique :</strong> comment les attaques DDoS évoluent-elles à l'ère de l'IA et de l'IoT, et quelles stratégies un administrateur systèmes/réseaux peut-il mettre en œuvre pour protéger efficacement les infrastructures ?</p>
+            <p style="margin-top:12px;">Maîtriser la détection (<strong>Zabbix</strong>, <strong>Wazuh</strong>) et le blocage (<strong>pfSense</strong>, WAF) de ce type d'incident est au cœur de mon projet professionnel. Cette veille a forgé ma posture proactive : anticiper par une surveillance constante des flux plutôt que subir l'incident.</p>
+            <button class="sim-btn sim-btn-attack" onclick="openSim()" style="width:auto; padding: 12px 25px; margin-top:18px;">LANCER LE SIMULATEUR DE CRISE</button>
         </div>
 
         <div class="veille-intro-card reveal">
-            <h4>SYNTHÈSE TECHNIQUE & CONVICTIONS SISR</h4>
-            <p><strong>PROBLÉMATIQUE :</strong> Comment les attaques DDoS évoluent-elles à l'ère de l'IA et de l'IoT, et quelles stratégies un technicien SISR peut-il mettre en œuvre pour protéger efficacement les infrastructures en 2026 ?</p>
-            <button class="sim-btn sim-btn-attack" onclick="openSim()" style="width:auto; padding: 12px 25px; margin-top:12px;">⚡ LANCER LE SIMULATEUR DE CRISE</button>
-        </div>
-
-        <div class="projects-grid">
-            <article class="article-card reveal">
-                <div class="article-tag">BOTNETS & C&C</div>
-                <div class="article-title">L'ARMÉE DE MACHINES ZOMBIES</div>
-                <p class="article-desc">Un <strong>Botnet</strong> est un réseau d'équipements compromis (PC, caméras IP, IoT) pilotés à distance via un serveur <strong>Command & Control (C&C)</strong>. L'attaquant utilise des protocoles comme IRC ou HTTP pour ordonner des millions de requêtes simultanées. 
-                
-L'enjeu pour le SISR est l'identification de ces flux massifs dispersés géographiquement, rendant le blocage par adresse IP individuelle totalement inefficace face à une puissance atteignant désormais plusieurs Térabits par seconde (Tbps).</p>
-                <div class="article-footer"><span>SOURCE: DOSSIER W.A (P.3-4)</span><span>DATE : 03/05/2026</span></div>
-            </article>
-
-            <article class="article-card reveal">
-                <div class="article-tag">MODÈLE OSI</div>
-                <div class="article-title">VECTEURS D'ATTAQUE MULTICOUCHES</div>
-                <p class="article-desc">Les attaques ciblent spécifiquement des faiblesses protocolaires :
-• <strong>L3/4 (Volumétrique) :</strong> Inondation UDP ou amplification <strong>DNS/NTP</strong> utilisant le <strong>Spoofing</strong> (usurpation d'IP).
-• <strong>L4 (Protocolaire) :</strong> Le <strong>SYN Flood</strong> exploite le 'Three-way Handshake' TCP en saturant la table des connexions mi-ouvertes.
-• <strong>L7 (Applicatif) :</strong> Utilisation de <strong>WAF</strong> pour contrer le HTTP Flood qui simule des parcours utilisateurs réels pour saturer les ressources serveur.</p>
-                <div class="article-footer"><span>SOURCE: DOSSIER W.A (P.5-7)</span><span>DATE : 03/05/2026</span></div>
-            </article>
-
-            <article class="article-card reveal">
-                <div class="article-tag">MITIGATION</div>
-                <div class="article-title">SOLUTIONS DE NETTOYAGE & ROUTAGE</div>
-                <p class="article-desc">La protection moderne repose sur des services spécialisés :
-- <strong>Scrubbing Center :</strong> Centre de nettoyage externe qui sépare le trafic légitime du malveillant.
-- <strong>BGP Flowspec :</strong> Extension du protocole BGP permettant de propager des règles de filtrage à l'échelle des routeurs opérateurs.
-- <strong>Routage Anycast :</strong> Distribution de l'adresse IP cible sur plusieurs serveurs mondiaux pour diluer la charge d'attaque et maintenir la disponibilité locale.</p>
-                <div class="article-footer"><span>SOURCE: DOSSIER W.A (P.8-11)</span><span>DATE : 03/05/2026</span></div>
-            </article>
-        </div>
-
-        <div class="section-title reveal" style="font-size:16px; margin-top:50px;">⚠️ CAS RÉEL : L'ATTAQUE LA PLUS PUISSANTE DE L'HISTOIRE</div>
-        <article class="article-card reveal" style="border-left: 4px solid var(--accent-red); background: #fff;">
-            <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
-                <div class="article-tag" style="background:var(--accent-red);">INCIDENT MAJEUR</div>
-                <div class="article-tag" style="background:#111;">CLOUDFLARE — OCTOBRE 2023</div>
-                <div class="article-tag" style="background:#111;">RECORD MONDIAL : 3,8 TBPS</div>
+            <h3 style="border:none; margin-bottom:15px;">SYNTHÈSE TECHNIQUE</h3>
+            <div class="impact-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="impact-item">
+                    <h5 style="color:#000;">BOTNETS & C&C</h5>
+                    <p style="font-size:12px;">Réseau d'équipements compromis (PC, caméras IP, IoT) piloté via un serveur Command & Control. Les flux massifs et dispersés géographiquement rendent le blocage par IP individuelle inefficace face à des puissances atteignant plusieurs Tbps.</p>
+                </div>
+                <div class="impact-item">
+                    <h5 style="color:#000;">VECTEURS MULTICOUCHES</h5>
+                    <p style="font-size:12px;"><strong>L3/4 :</strong> inondation UDP, amplification DNS/NTP par Spoofing. <strong>L4 :</strong> SYN Flood exploitant le Three-way Handshake TCP. <strong>L7 :</strong> HTTP Flood simulant des parcours utilisateurs réels, contré par un WAF.</p>
+                </div>
+                <div class="impact-item">
+                    <h5 style="color:#000;">MITIGATION</h5>
+                    <p style="font-size:12px;"><strong>Scrubbing Center :</strong> nettoyage externe du trafic. <strong>BGP Flowspec :</strong> filtrage propagé aux routeurs opérateurs. <strong>Anycast :</strong> distribution de l'IP cible pour diluer la charge d'attaque.</p>
+                </div>
             </div>
-            <div class="article-title">OPÉRATION HTTP/2 RAPID RESET — 3,8 TBPS : LE RECORD ABSOLU</div>
-            <p class="article-desc">En octobre 2023, Cloudflare a neutralisé ce qui est à ce jour la plus grande attaque DDoS jamais enregistrée dans l'histoire d'Internet : un pic à <strong>3,8 Térabits par seconde (Tbps)</strong>, soit l'équivalent de télécharger environ 475 gigaoctets de données chaque seconde, en continu, vers une seule cible.
-
-<strong>🔍 ANALYSE TECHNIQUE :</strong>
-L'attaque exploitait la vulnérabilité <strong>HTTP/2 Rapid Reset</strong> (CVE-2023-44487), une faille protocolaire de couche 7 permettant à un nombre relativement restreint de machines compromises (~20 000 nœuds) de générer des milliards de requêtes par seconde. Chaque nœud du botnet envoyait en boucle des requêtes HTTP/2 immédiatement annulées (RST_STREAM), forçant le serveur cible à allouer puis libérer des ressources CPU en continu jusqu'à saturation totale.
-
-<strong>🌍 VECTEURS UTILISÉS :</strong>
-• Botnet composé de routeurs et équipements IoT compromis à l'échelle mondiale
-• Amplification via HTTP/2 multiplexing — une connexion = des milliers de requêtes simultanées
-• Attaque multi-vecteur : couche 7 applicative + volumétrique couche 3/4 en simultané
-• Durée : environ 2 minutes de pic, suffisantes pour paralyser n'importe quel datacenter non protégé
-
-<strong>🛡️ RÉPONSE SISR — CE QUE J'AURAIS APPLIQUÉ :</strong>
-Face à cet incident, les mesures défensives côté administrateur SISR auraient été : activation immédiate du <strong>Scrubbing Center</strong> pour absorber le volume, déploiement de règles <strong>BGP Blackhole</strong> en amont des routeurs opérateurs, mise à jour d'urgence des proxies inverses (NGINX, HAProxy) pour patcher CVE-2023-44487, et supervision Zabbix avec seuil d'alerte sur le taux de requêtes HTTP par seconde. Cet incident démontre que même les géants du cloud peuvent être ciblés — la défense en profondeur est non négociable.</p>
-            <div class="article-footer">
-                <span>SOURCE : CLOUDFLARE BLOG / CERT-FR / CVE-2023-44487</span>
-                <span>IMPACT : MONDIAL — RECORD ABSOLU NON BATTU EN 2026</span>
-            </div>
-        </article>
-
-        <div class="section-title reveal" style="font-size:16px; margin-top:50px;">📡 GOOGLE ALERTS : FLUX ANALYTIQUE (8 ANALYSES) <span class="live-tag" id="live-date">(EN DIRECT - 2026)</span></div>
-        <div id="veille-news-grid" class="projects-grid">
-            <div style="grid-column:1/-1; padding:45px; text-align:center; opacity:0.5;">CHARGEMENT DU FLUX TECHNIQUE EN TEMPS RÉEL...</div>
         </div>
+
+        <div class="veille-intro-card reveal" style="border-left: 4px solid var(--accent-red);">
+            <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:15px;">
+                <div class="article-tag" style="background:var(--accent-red);">CAS RÉEL</div>
+                <div class="article-tag">CLOUDFLARE — OCTOBRE 2023</div>
+                <div class="article-tag">3,8 TBPS — RECORD MONDIAL</div>
+            </div>
+            <h3 style="border:none; margin-bottom:10px;">HTTP/2 RAPID RESET : LA PLUS GRANDE ATTAQUE DDOS JAMAIS ENREGISTRÉE</h3>
+            <p>En octobre 2023, Cloudflare a neutralisé un pic à <strong>3,8 Térabits par seconde</strong>, l'équivalent d'environ 475 Go téléchargés chaque seconde vers une seule cible.</p>
+
+            <div class="timeline-item" style="margin-top:18px;">
+                <p class="skill-label" style="display:block; margin-bottom:4px;">ANALYSE TECHNIQUE</p>
+                <p style="font-size:13px;">Exploitation de la faille protocolaire <strong>HTTP/2 Rapid Reset</strong> (CVE-2023-44487) : environ 20 000 nœuds compromis envoyaient en boucle des requêtes HTTP/2 immédiatement annulées (RST_STREAM), forçant le serveur à allouer puis libérer des ressources CPU jusqu'à saturation.</p>
+            </div>
+            <div class="timeline-item">
+                <p class="skill-label" style="display:block; margin-bottom:4px;">VECTEURS UTILISÉS</p>
+                <ul class="timeline-list">
+                    <li>Botnet de routeurs et équipements IoT compromis à l'échelle mondiale</li>
+                    <li>Amplification par multiplexing HTTP/2 : une connexion = des milliers de requêtes</li>
+                    <li>Attaque multi-vecteur, couche 7 applicative et couche 3/4 volumétrique combinées</li>
+                    <li>Pic d'environ 2 minutes, suffisant pour paralyser un datacenter non protégé</li>
+                </ul>
+            </div>
+            <div class="timeline-item">
+                <p class="skill-label" style="display:block; margin-bottom:4px;">RÉPONSE ADMINISTRATEUR — CE QUE J'AURAIS APPLIQUÉ</p>
+                <p style="font-size:13px;">Activation du Scrubbing Center pour absorber le volume, règles BGP Blackhole en amont des routeurs, mise à jour d'urgence des proxies inverses (NGINX, HAProxy) pour patcher la CVE, et supervision Zabbix avec seuil d'alerte sur le taux de requêtes HTTP/s. Même les géants du cloud peuvent être ciblés — la défense en profondeur n'est pas négociable.</p>
+            </div>
+
+            <div class="article-footer" style="margin-top:5px;"><span>SOURCE : CLOUDFLARE BLOG / CERT-FR / CVE-2023-44487</span></div>
+        </div>
+
+        <h3 class="reveal" style="margin-top:45px; margin-bottom:20px; display:block;">DOSSIER DE VEILLE — 8 ANALYSES TECHNIQUES</h3>
+        <div id="veille-news-grid" class="projects-grid"></div>
     </section>
 
     <!-- SOURCES -->
@@ -742,7 +843,7 @@ Face à cet incident, les mesures défensives côté administrateur SISR auraien
     </section>
 
     <footer>
-        <div class="bold" style="font-size: 11px;">© 2026 WESLEY AMAVI — SISR</div>
+        <div class="bold" style="font-size: 11px;">© 2026 WESLEY AMAVI — CYBERSÉCURITÉ</div>
         <div class="footer-links bold" style="font-size: 11px;">
             <a href="https://linkedin.com" target="_blank">LINKEDIN</a>
             <a href="https://github.com/Wes1616" target="_blank">GITHUB</a>
@@ -838,11 +939,11 @@ Face à cet incident, les mesures défensives côté administrateur SISR auraien
         function fetchDDoSAlerts() {
             const container = document.getElementById('veille-news-grid');
             container.innerHTML = articlesDB.map((art) => `
-                <article class="article-card reveal is-visible">
-                    <div class="article-tag">DÉTECTION : ${art.source}</div>
+                <article class="news-card reveal is-visible">
+                    <div class="article-tag">${art.source}</div>
                     <div class="article-title">${art.title}</div>
                     <p class="article-desc">${art.desc}</p>
-                    <div class="article-footer"><span>DATE : ${art.date}</span><span>HEURE : ${art.time}</span></div>
+                    <div class="article-footer"><span>DATE : ${art.date}</span></div>
                 </article>
             `).join('');
         }
