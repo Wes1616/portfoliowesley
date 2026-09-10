@@ -875,63 +875,47 @@
 
     <script>
         // ═══════════════════════════════════════════════════
-        // VEILLE — 8 ARTICLES — 29 MAI 2026 — AVANT 08:00
+        // VEILLE — 8 ARTICLES
         // ═══════════════════════════════════════════════════
         const articlesDB = [
             {
                 source: "Link11 Threat Intelligence Center n°503",
                 title: "VAGUE D'ATTAQUES UDP FRAGMENTÉES SUR LES CŒURS DE RÉSEAU 5G",
-                date: "29/05/2026",
-                time: "01:14",
                 desc: "Le rapport Link11 de mai 2026 signale une recrudescence massive d'attaques par déni de service distribué exploitant des paquets UDP fragmentés. Contrairement aux flux standards, ces paquets obligent les équipements de sécurité périmétriques (Firewalls de couche 4) à réassembler les fragments avant analyse, ce qui sature instantanément les ressources CPU et la mémoire vive. L'attaque a atteint des pics records de 7.2 Tbps. Pour l'administrateur SISR, la parade repose sur le déploiement immédiat de règles BGP Flowspec au niveau des routeurs de bordure pour filtrer ces fragments malveillants avant qu'ils ne pénètrent le LAN."
             },
             {
                 source: "Bulletin de sécurité ANSSI-CERT-FR 2026-05",
                 title: "MENACE CRITIQUE : BOTNETS POLYMORPHES ASSISTÉS PAR IA GÉNÉRATIVE",
-                date: "29/05/2026",
-                time: "02:03",
                 desc: "L'ANSSI alerte sur l'émergence d'une nouvelle génération de botnets utilisant des algorithmes d'Intelligence Artificielle pour modifier dynamiquement leur comportement en temps réel. Ces requêtes HTTP Flood de couche 7 sont conçues pour imiter parfaitement la navigation d'un utilisateur réel (délais aléatoires, parcours de pages cohérents, en-têtes User-Agent valides). Cette technique rend les Web Application Firewalls (WAF) basés sur des signatures statiques totalement inopérantes. Pour un technicien SISR, la défense nécessite désormais l'implémentation de solutions de détection comportementale basées sur le Machine Learning."
             },
             {
                 source: "Cloudflare Global Infrastructure Report Q2-2026",
                 title: "RECORDS D'ATTAQUES SYN FLOOD NEUTRALISÉS PAR L'EDGE COMPUTING",
-                date: "29/05/2026",
-                time: "02:51",
                 desc: "Cloudflare a enregistré en mai 2026 la plus grande vague d'attaques SYN Flood de l'histoire, ciblant les infrastructures critiques européennes. L'attaque exploite le processus de 'Three-way Handshake' du protocole TCP : le botnet envoie des millions de paquets SYN sans jamais répondre au SYN-ACK du serveur, remplissant ainsi les tables d'état du pare-feu et empêchant toute nouvelle connexion légitime. L'intégration de cookies SYN dynamiques au niveau des serveurs Edge permet de valider la légitimité des sources avant qu'elles n'atteignent le serveur de production."
             },
             {
                 source: "Netscout Omnis Global Threat Horizon 2026",
                 title: "RÉFLEXION DNS RÉCURSIVE : LA SATURATION SILENCIEUSE DES PME",
-                date: "29/05/2026",
-                time: "03:38",
                 desc: "L'analyse de Netscout démontre que la réflexion DNS reste le vecteur d'attaque préféré pour paralyser les réseaux des PME en 2026. En utilisant des serveurs DNS récursifs ouverts comme amplificateurs, les attaquants envoient de petites requêtes usurpant l'adresse IP de la victime. Les serveurs DNS répondent alors avec des paquets 50 à 100 fois plus volumineuses vers la cible, provoquant une congestion totale des liens de transit. Pour le technicien SISR, la mise en place d'un filtrage Egress strict et la configuration de pare-feu capables de détecter les volumes DNS anormaux sont essentiels."
             },
             {
                 source: "Radware Security Advisory n°2026-12",
                 title: "WEB DDOS ET APIS REST : LA SATURATION DES MICRO-SERVICES CLOUD",
-                date: "29/05/2026",
-                time: "04:22",
                 desc: "Radware signale une augmentation drastique des attaques 'Burst DDoS' ciblant spécifiquement les APIs REST et les architectures micro-services. Ces attaques consistent en des pics de trafic massifs d'une durée extrêmement courte (moins de 30 secondes), ce qui rend toute atténuation manuelle ou réactive impossible. Le but recherché par les cybercriminels est de saturer les équilibreurs de charge (Load Balancers) et de provoquer des erreurs 502/504 en cascade. La protection de ces services web critiques en 2026 nécessite une architecture de sécurité nativement intégrée au Cloud (Scrubbing-as-a-Service) capable d'ingérer plusieurs Térabits par seconde instantanément."
             },
             {
                 source: "Akamai Cyber Watch Bulletin — 2026",
                 title: "HTTP/2 RAPID RESET : UNE VULNÉRABILITÉ PROTOCOLAIRE TOUJOURS ACTUELLE",
-                date: "29/05/2026",
-                time: "05:17",
                 desc: "Akamai rapporte de nouvelles variantes de l'attaque Rapid Reset exploitant une faille de gestion des flux dans le protocole HTTP/2. En envoyant un flux continu de requêtes immédiatement suivies d'une réinitialisation de flux (RST_STREAM), un attaquant peut forcer un serveur web à consommer 100 % de ses ressources CPU pour traiter des requêtes annulées. Un seul nœud zombie peut ainsi paralyser un serveur complet. Cette vulnérabilité de couche 7 ne nécessite pas de grands botnets pour être dévastatrice. Les équipes SISR doivent impérativement s'assurer que leurs proxies inverses (NGINX, HAProxy) sont mis à jour avec les derniers patchs."
             },
             {
                 source: "Kaspersky Botnet Monitoring Q2-2026",
                 title: "ÉVOLUTION DE MIRAI : INFECTION ET EXPLOITATION DES MODEMS INDUSTRIELS 5G",
-                date: "29/05/2026",
-                time: "06:44",
                 desc: "Les capteurs de Kaspersky ont identifié un variant sophistiqué du malware Mirai ciblant spécifiquement les passerelles et modems industriels 5G. Contrairement aux versions précédentes limitées à la couche domestique, ce malware exploite des vulnérabilités Zero-Day pour compromettre des équipements à haute bande passante. Une fois infectées, ces machines disposent d'un débit montant (upload) colossal, permettant de lancer des attaques DDoS d'une puissance inédite avec un nombre réduit de nœuds. La segmentation réseau via VLANs et l'isolation stricte des équipements IIoT (Industrial IoT) par des règles de filtrage de couche 3 sont les seules méthodes fiables."
             },
             {
                 source: "Imperva CyberEdge Global Survey 2026",
                 title: "DÉNI DE SERVICE APPLICATIF : LE DDOS COMME DIVERSION (SMOKESCREEN)",
-                date: "29/05/2026",
-                time: "07:29",
                 desc: "Imperva met en lumière une tendance tactique majeure en mai 2026 : l'utilisation du DDoS comme simple écran de fumée (Smokescreen). Pendant que les équipes d'administration SISR sont mobilisées sous pression pour rétablir la disponibilité réseau et traiter les alertes de saturation des liens, les attaquants déclenchent en parallèle une intrusion ciblée ou une exfiltration de données sensibles. L'attaque volumétrique n'est alors qu'un bruit de fond destiné à paralyser les outils de monitoring et à saturer les journaux d'événements (logs). L'administrateur doit donc maintenir une vigilance double : tout en activant les centres de nettoyage (Scrubbing), il est impératif de continuer à surveiller les accès aux bases de données."
             }
         ];
@@ -943,8 +927,7 @@
                     <div class="article-tag">${art.source}</div>
                     <div class="article-title">${art.title}</div>
                     <p class="article-desc">${art.desc}</p>
-                    <div class="article-footer"><span>DATE : ${art.date}</span></div>
-                </article>
+                    </article>
             `).join('');
         }
 
