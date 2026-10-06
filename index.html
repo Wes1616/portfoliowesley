@@ -570,7 +570,33 @@
     <!-- SECTION PROJETS PERSONNELS -->
     <section id="projets" class="exam-section">
         <div class="section-title reveal">PROJETS PERSONNELS — WES CLOUD</div>
-        <p class="reveal" style="text-transform:none; font-size:13px; opacity:0.8; max-width:800px; margin-bottom:25px;">En parallèle de ma formation, je développe <strong>WES CLOUD</strong>, mon projet personnel autour de la cybersécurité et de l'administration d'infrastructures : un lab technique pour expérimenter, et une offre de service packagée pour des clients réels.</p>
+        <p class="reveal" style="text-transform:none; font-size:13px; opacity:0.8; max-width:800px; margin-bottom:25px;">En parallèle de ma formation, je développe <strong>WES CLOUD</strong>, mon projet personnel autour de la cybersécurité et de l'administration d'infrastructures : un SaaS de surveillance de sécurité, une offre de service packagée pour des clients réels, et un lab technique pour expérimenter.</p>
+
+        <div class="veille-intro-card reveal" style="border-left: 4px solid var(--accent-green); margin-bottom:25px;">
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+                <span class="article-tag" style="background:var(--accent-green);">SAAS EN LIGNE</span>
+                <span class="article-tag">NEXT.JS · REACT · TYPESCRIPT</span>
+                <span class="article-tag">SUPABASE · STRIPE · RESEND</span>
+            </div>
+            <h3 style="border:none; margin-bottom:6px;">WES CLOUD — SURFACE D'ATTAQUE</h3>
+            <p style="font-size:12px; opacity:0.6; margin-bottom:15px; text-transform:none;">SaaS freemium de surveillance de surface d'attaque externe</p>
+            <p style="font-size:13px; margin-bottom:18px;">Scanner 100% passif (aucune intrusion, aucun scan de ports — uniquement des sources publiques et légales) qui surveille en continu la posture de sécurité externe d'un nom de domaine et alerte avant que ça ne devienne un problème.</p>
+            <div class="impact-grid" style="margin-bottom:18px;">
+                <div class="impact-item">
+                    <h5 style="color:#000;">4 VÉRIFICATIONS AUTOMATISÉES</h5>
+                    <p style="font-size:12px;">DNS et expiration WHOIS du domaine · certificat SSL/TLS (expiration, autorité) · headers de sécurité (HSTS, CSP, X-Frame-Options) · sous-domaines exposés via la transparence des certificats (crt.sh)</p>
+                </div>
+                <div class="impact-item">
+                    <h5 style="color:#000;">PRODUIT & FACTURATION</h5>
+                    <p style="font-size:12px;">Score de risque sur 100, scan quotidien automatisé (cron Vercel), email de récap et d'alerte (Resend), authentification et base de données Supabase, abonnement Pro via Stripe (checkout, webhook, portail client).</p>
+                </div>
+            </div>
+            <p style="font-size:12px; opacity:0.6; margin-bottom:18px; text-transform:none;">Plan Gratuit (1 domaine, scan manuel) · Plan Pro 19€/mois (domaines illimités, scan quotidien, alertes par email). Conçu et développé en pair-programming avec Claude Code.</p>
+            <a href="https://wescloud-surface.vercel.app/" target="_blank" class="btn-synth-premium" style="width:fit-content;">
+                <svg viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"></path><polyline points="14 4 20 4 20 10"></polyline><line x1="10" y1="14" x2="20" y2="4"></line></svg>
+                VOIR LE SITE EN LIGNE
+            </a>
+        </div>
 
         <div class="profil-grid projects-feature-grid reveal">
             <div class="veille-intro-card" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
@@ -593,15 +619,11 @@
                     <li>Téléassistance et support prioritaire (RustDesk)</li>
                     <li>Audit de sécurité offert en démonstration client</li>
                 </ul>
-                <div style="margin-bottom:18px;">
+                <div>
                     <span class="article-tag" style="margin-right:6px;">DUPLICATI</span>
                     <span class="article-tag" style="margin-right:6px;">BITWARDEN</span>
                     <span class="article-tag">RUSTDESK</span>
                 </div>
-                <a href="https://wescloud-surface.vercel.app/" target="_blank" class="btn-synth-premium" style="width:fit-content;">
-                    <svg viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"></path><polyline points="14 4 20 4 20 10"></polyline><line x1="10" y1="14" x2="20" y2="4"></line></svg>
-                    VOIR LE SITE EN LIGNE
-                </a>
             </div>
         </div>
 
