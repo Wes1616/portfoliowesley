@@ -179,6 +179,13 @@
         .news-card .article-tag { font-size: 8px; }
         .news-card .article-title { font-size: 12.5px; padding-bottom: 8px; }
         .news-card .article-desc { font-size: 11px; line-height: 1.6; }
+        .project-video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            background: #000;
+            border-bottom: var(--border-style);
+        }
         .veille-intro-card {
             background: #fff;
             border: var(--border-style);
@@ -193,6 +200,7 @@
             gap: 25px;
             margin-top: 25px;
         }
+        .projects-feature-grid { grid-template-columns: 1.1fr 1fr; }
         .skills-grid { display: flex; flex-direction: column; gap: 10px; }
         .skill-row {
             display: grid;
@@ -426,7 +434,7 @@
             color: var(--accent-red);
         }
         @media (max-width: 768px) {
-            header, #about, .tech-bar, #sim-modal, .impact-grid, .profil-grid { grid-template-columns: 1fr; }
+            header, #about, .tech-bar, #sim-modal, .impact-grid, .profil-grid, .projects-feature-grid { grid-template-columns: 1fr; }
             footer { flex-direction: column; gap: 20px; text-align: center; }
             .footer-links { flex-direction: column; gap: 12px; }
             #sim-visual { height: 250px; }
@@ -452,6 +460,7 @@
             <ul style="list-style:none;">
                 <li><a href="#about">À PROPOS</a></li>
                 <li><a href="#profil">PROFIL</a></li>
+                <li><a href="#projets">PROJETS</a></li>
                 <li><a href="#e5">E5</a></li>
                 <li><a href="#e6">E6</a></li>
                 <li><a href="#veille">VEILLE</a></li>
@@ -555,8 +564,49 @@
             </div>
         </div>
 
+        <p class="reveal" style="text-transform:none; font-size:12px; opacity:0.7; margin-top:25px;">→ Mes projets personnels (WES CLOUD) sont présentés en détail dans la section <a href="#projets" style="text-decoration:underline;">Projets</a>.</p>
+    </section>
+
+    <!-- SECTION PROJETS PERSONNELS -->
+    <section id="projets" class="exam-section">
+        <div class="section-title reveal">PROJETS PERSONNELS — WES CLOUD</div>
+        <p class="reveal" style="text-transform:none; font-size:13px; opacity:0.8; max-width:800px; margin-bottom:25px;">En parallèle de ma formation, je développe <strong>WES CLOUD</strong>, mon projet personnel autour de la cybersécurité et de l'administration d'infrastructures : un lab technique pour expérimenter, et une offre de service packagée pour des clients réels.</p>
+
+        <div class="profil-grid projects-feature-grid reveal">
+            <div class="veille-intro-card" style="padding:0; overflow:hidden; display:flex; flex-direction:column;">
+                <video class="project-video" controls preload="metadata" poster="wescloud-poster.jpg">
+                    <source src="wescloud-demo.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de cette vidéo.
+                </video>
+                <div style="padding:20px 25px;">
+                    <p class="info-label" style="margin-bottom:6px;">DÉMO VIDÉO — 58S</p>
+                    <p style="text-transform:none; font-size:12px; opacity:0.7;">Présentation du service : perte de données simulée, restauration chiffrée via Duplicati, coffre-fort Bitwarden et téléassistance RustDesk.</p>
+                </div>
+            </div>
+
+            <div class="veille-intro-card">
+                <h3 style="border:none; margin-bottom:6px;">WES CLOUD — PACK BLINDAGE PRO</h3>
+                <p style="font-size:12px; opacity:0.6; margin-bottom:15px; text-transform:none;">Offre de service cybersécurité pour particuliers & TPE</p>
+                <ul class="timeline-list" style="margin-bottom:18px;">
+                    <li>Sauvegardes cloud automatiques et chiffrées (Duplicati) avec restauration guidée en 3 clics</li>
+                    <li>Coffre-fort de mots de passe chiffré, centralisé (Bitwarden)</li>
+                    <li>Téléassistance et support prioritaire (RustDesk)</li>
+                    <li>Audit de sécurité offert en démonstration client</li>
+                </ul>
+                <div style="margin-bottom:18px;">
+                    <span class="article-tag" style="margin-right:6px;">DUPLICATI</span>
+                    <span class="article-tag" style="margin-right:6px;">BITWARDEN</span>
+                    <span class="article-tag">RUSTDESK</span>
+                </div>
+                <a href="https://wescloud-surface.vercel.app/" target="_blank" class="btn-synth-premium" style="width:fit-content;">
+                    <svg viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"></path><polyline points="14 4 20 4 20 10"></polyline><line x1="10" y1="14" x2="20" y2="4"></line></svg>
+                    VOIR LE SITE EN LIGNE
+                </a>
+            </div>
+        </div>
+
         <div class="veille-intro-card reveal" style="margin-top:25px;">
-            <h3 style="border:none; margin-bottom:15px;">PROJETS PERSONNELS — LAB WES CLOUD (2026)</h3>
+            <h3 style="border:none; margin-bottom:15px;">WES CLOUD — LAB INFRASTRUCTURE (2026)</h3>
             <div class="impact-grid">
                 <div class="impact-item">
                     <h5 style="color:#000;">INFRASTRUCTURE RÉSEAU & SÉCURITÉ</h5>
@@ -564,7 +614,7 @@
                 </div>
                 <div class="impact-item">
                     <h5 style="color:#000;">ADMINISTRATION GLPI & SUPERVISION PARC</h5>
-                    <p style="font-size:12px;">GLPI 11 sur Debian 12 (Apache2, MariaDB) — agents Windows/Linux, OCS Inventory, OpenLDAP. Supervision SNMP Zabbix, alertes réseau — sauvegarde auto de la base GLPI via Bash + cron. Déploiement Duplicati (sauvegardes chiffrées), Bitwarden self-hosted, RustDesk (téléassistance). Versioning Git, documentation technique via GitHub Pages.</p>
+                    <p style="font-size:12px;">GLPI 11 sur Debian 12 (Apache2, MariaDB) — agents Windows/Linux, OCS Inventory, OpenLDAP. Supervision SNMP Zabbix, alertes réseau — sauvegarde auto de la base GLPI via Bash + cron. Versioning Git, documentation technique via GitHub Pages.</p>
                 </div>
             </div>
         </div>
