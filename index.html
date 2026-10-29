@@ -551,8 +551,6 @@
                 <li><a href="#about">À PROPOS</a></li>
                 <li><a href="#profil">PROFIL</a></li>
                 <li><a href="#projets">PROJETS</a></li>
-                <li><a href="#e5">E5</a></li>
-                <li><a href="#e6">E6</a></li>
                 <li><a href="#veille">VEILLE</a></li>
                 <li><a href="#certifications">CERTIFICATIONS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
@@ -573,7 +571,7 @@
             </a>
         </div>
         <div class="hero-stats">
-            <div class="hero-stat"><span class="hero-stat-num">10</span><span class="hero-stat-label">PROJETS E5 / E6</span></div>
+            <div class="hero-stat"><span class="hero-stat-num">10</span><span class="hero-stat-label">RÉALISATIONS TECHNIQUES</span></div>
             <div class="hero-stat"><span class="hero-stat-num">2</span><span class="hero-stat-label">PROJETS WES CLOUD</span></div>
             <div class="hero-stat"><span class="hero-stat-num">3</span><span class="hero-stat-label">ANS DE FORMATION</span></div>
         </div>
@@ -756,11 +754,8 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- SECTION E5 -->
-    <section id="e5" class="exam-section">
-        <div class="section-title reveal">E5</div>
+        <h3 class="reveal" style="border:none; margin:45px 0 8px;">RÉALISATIONS TECHNIQUES — INFRASTRUCTURE & SÉCURITÉ</h3>
+        <p class="reveal" style="text-transform:none; font-size:13px; opacity:0.8; max-width:800px; margin-bottom:25px;">10 projets menés en conditions réelles durant ma formation, couvrant tout le cycle d'une infrastructure : déploiement, sécurité périmétrique, haute disponibilité et supervision.</p>
         <div class="projects-grid">
             <article class="project-card reveal">
                 <a href="sujet1.pdf" target="_blank">
@@ -838,22 +833,15 @@
                     <div class="project-info">
                         <h3>08. SUPERVISION RÉSEAU ZABBIX</h3>
                         <p style="text-transform:none; font-size:11px; margin-bottom:8px;"><strong>Objectif :</strong> Monitoring temps réel via agents et protocole SNMP.</p>
-                        <p class="project-tags">[ZABBIX] [SNMP] [MONITORING] [SISR]</p>
+                        <p class="project-tags">[ZABBIX] [SNMP] [MONITORING] [INFRA]</p>
                     </div>
                 </a>
             </article>
-        </div>
-    </section>
-
-    <!-- SECTION E6 -->
-    <section id="e6" class="exam-section">
-        <div class="section-title reveal">E6</div>
-        <div class="projects-grid">
             <article class="project-card reveal">
                 <a href="sujete61.pdf" target="_blank">
-                    <div class="image-aspect-ratio"><div class="icon-tile"><span class="tile-num" style="font-size:22px;">E6.1</span><svg viewBox="0 0 24 24"><path d="M12 3.2 19 6v6c0 4.7-3.1 7.8-7 9.3-3.9-1.5-7-4.6-7-9.3V6z" stroke-linejoin="round"/><path d="m9.3 12.2 1.9 1.9 3.5-3.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+                    <div class="image-aspect-ratio"><div class="icon-tile"><span class="tile-num">09</span><svg viewBox="0 0 24 24"><path d="M12 3.2 19 6v6c0 4.7-3.1 7.8-7 9.3-3.9-1.5-7-4.6-7-9.3V6z" stroke-linejoin="round"/><path d="m9.3 12.2 1.9 1.9 3.5-3.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
                     <div class="project-info">
-                        <h3>E6.1. TICKETING SÉCURISÉ</h3>
+                        <h3>09. TICKETING SÉCURISÉ (MFA)</h3>
                         <p style="text-transform:none; font-size:11px; margin-bottom:8px;">Déploiement GLPI avec authentification MFA et filtrage réseau pfSense.</p>
                         <p class="project-tags">[MFA] [GLPI] [CYBERSÉCURITÉ] [PFSENSE]</p>
                     </div>
@@ -861,9 +849,9 @@
             </article>
             <article class="project-card reveal">
                 <a href="sujete62.pdf" target="_blank">
-                    <div class="image-aspect-ratio"><div class="icon-tile"><span class="tile-num" style="font-size:22px;">E6.2</span><svg viewBox="0 0 24 24"><path d="M4 7h13m0 0-3-3m3 3-3 3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 17H7m0 0 3 3m-3-3 3-3" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+                    <div class="image-aspect-ratio"><div class="icon-tile"><span class="tile-num">10</span><svg viewBox="0 0 24 24"><path d="M4 7h13m0 0-3-3m3 3-3 3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 17H7m0 0 3 3m-3-3 3-3" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
                     <div class="project-info">
-                        <h3>E6.2. INFRASTRUCTURE PME</h3>
+                        <h3>10. INFRASTRUCTURE PME MULTI-SITES</h3>
                         <p style="text-transform:none; font-size:11px; margin-bottom:8px;">Segmentation VLANs et routage inter-VLAN sur équipements Cisco.</p>
                         <p class="project-tags">[ROUTAGE] [VLAN] [CISCO IOS] [ADRESSAGE]</p>
                     </div>
@@ -1054,12 +1042,12 @@
             {
                 source: "Link11 Threat Intelligence Center n°503",
                 title: "VAGUE D'ATTAQUES UDP FRAGMENTÉES SUR LES CŒURS DE RÉSEAU 5G",
-                desc: "Le rapport Link11 de mai 2026 signale une recrudescence massive d'attaques par déni de service distribué exploitant des paquets UDP fragmentés. Contrairement aux flux standards, ces paquets obligent les équipements de sécurité périmétriques (Firewalls de couche 4) à réassembler les fragments avant analyse, ce qui sature instantanément les ressources CPU et la mémoire vive. L'attaque a atteint des pics records de 7.2 Tbps. Pour l'administrateur SISR, la parade repose sur le déploiement immédiat de règles BGP Flowspec au niveau des routeurs de bordure pour filtrer ces fragments malveillants avant qu'ils ne pénètrent le LAN."
+                desc: "Le rapport Link11 de mai 2026 signale une recrudescence massive d'attaques par déni de service distribué exploitant des paquets UDP fragmentés. Contrairement aux flux standards, ces paquets obligent les équipements de sécurité périmétriques (Firewalls de couche 4) à réassembler les fragments avant analyse, ce qui sature instantanément les ressources CPU et la mémoire vive. L'attaque a atteint des pics records de 7.2 Tbps. Pour l'administrateur systèmes et réseaux, la parade repose sur le déploiement immédiat de règles BGP Flowspec au niveau des routeurs de bordure pour filtrer ces fragments malveillants avant qu'ils ne pénètrent le LAN."
             },
             {
                 source: "Bulletin de sécurité ANSSI-CERT-FR 2026-05",
                 title: "MENACE CRITIQUE : BOTNETS POLYMORPHES ASSISTÉS PAR IA GÉNÉRATIVE",
-                desc: "L'ANSSI alerte sur l'émergence d'une nouvelle génération de botnets utilisant des algorithmes d'Intelligence Artificielle pour modifier dynamiquement leur comportement en temps réel. Ces requêtes HTTP Flood de couche 7 sont conçues pour imiter parfaitement la navigation d'un utilisateur réel (délais aléatoires, parcours de pages cohérents, en-têtes User-Agent valides). Cette technique rend les Web Application Firewalls (WAF) basés sur des signatures statiques totalement inopérantes. Pour un technicien SISR, la défense nécessite désormais l'implémentation de solutions de détection comportementale basées sur le Machine Learning."
+                desc: "L'ANSSI alerte sur l'émergence d'une nouvelle génération de botnets utilisant des algorithmes d'Intelligence Artificielle pour modifier dynamiquement leur comportement en temps réel. Ces requêtes HTTP Flood de couche 7 sont conçues pour imiter parfaitement la navigation d'un utilisateur réel (délais aléatoires, parcours de pages cohérents, en-têtes User-Agent valides). Cette technique rend les Web Application Firewalls (WAF) basés sur des signatures statiques totalement inopérantes. Pour un technicien réseau, la défense nécessite désormais l'implémentation de solutions de détection comportementale basées sur le Machine Learning."
             },
             {
                 source: "Cloudflare Global Infrastructure Report Q2-2026",
@@ -1069,7 +1057,7 @@
             {
                 source: "Netscout Omnis Global Threat Horizon 2026",
                 title: "RÉFLEXION DNS RÉCURSIVE : LA SATURATION SILENCIEUSE DES PME",
-                desc: "L'analyse de Netscout démontre que la réflexion DNS reste le vecteur d'attaque préféré pour paralyser les réseaux des PME en 2026. En utilisant des serveurs DNS récursifs ouverts comme amplificateurs, les attaquants envoient de petites requêtes usurpant l'adresse IP de la victime. Les serveurs DNS répondent alors avec des paquets 50 à 100 fois plus volumineuses vers la cible, provoquant une congestion totale des liens de transit. Pour le technicien SISR, la mise en place d'un filtrage Egress strict et la configuration de pare-feu capables de détecter les volumes DNS anormaux sont essentiels."
+                desc: "L'analyse de Netscout démontre que la réflexion DNS reste le vecteur d'attaque préféré pour paralyser les réseaux des PME en 2026. En utilisant des serveurs DNS récursifs ouverts comme amplificateurs, les attaquants envoient de petites requêtes usurpant l'adresse IP de la victime. Les serveurs DNS répondent alors avec des paquets 50 à 100 fois plus volumineuses vers la cible, provoquant une congestion totale des liens de transit. Pour le technicien réseau, la mise en place d'un filtrage Egress strict et la configuration de pare-feu capables de détecter les volumes DNS anormaux sont essentiels."
             },
             {
                 source: "Radware Security Advisory n°2026-12",
@@ -1079,7 +1067,7 @@
             {
                 source: "Akamai Cyber Watch Bulletin — 2026",
                 title: "HTTP/2 RAPID RESET : UNE VULNÉRABILITÉ PROTOCOLAIRE TOUJOURS ACTUELLE",
-                desc: "Akamai rapporte de nouvelles variantes de l'attaque Rapid Reset exploitant une faille de gestion des flux dans le protocole HTTP/2. En envoyant un flux continu de requêtes immédiatement suivies d'une réinitialisation de flux (RST_STREAM), un attaquant peut forcer un serveur web à consommer 100 % de ses ressources CPU pour traiter des requêtes annulées. Un seul nœud zombie peut ainsi paralyser un serveur complet. Cette vulnérabilité de couche 7 ne nécessite pas de grands botnets pour être dévastatrice. Les équipes SISR doivent impérativement s'assurer que leurs proxies inverses (NGINX, HAProxy) sont mis à jour avec les derniers patchs."
+                desc: "Akamai rapporte de nouvelles variantes de l'attaque Rapid Reset exploitant une faille de gestion des flux dans le protocole HTTP/2. En envoyant un flux continu de requêtes immédiatement suivies d'une réinitialisation de flux (RST_STREAM), un attaquant peut forcer un serveur web à consommer 100 % de ses ressources CPU pour traiter des requêtes annulées. Un seul nœud zombie peut ainsi paralyser un serveur complet. Cette vulnérabilité de couche 7 ne nécessite pas de grands botnets pour être dévastatrice. Les équipes infrastructure doivent impérativement s'assurer que leurs proxies inverses (NGINX, HAProxy) sont mis à jour avec les derniers patchs."
             },
             {
                 source: "Kaspersky Botnet Monitoring Q2-2026",
@@ -1089,7 +1077,7 @@
             {
                 source: "Imperva CyberEdge Global Survey 2026",
                 title: "DÉNI DE SERVICE APPLICATIF : LE DDOS COMME DIVERSION (SMOKESCREEN)",
-                desc: "Imperva met en lumière une tendance tactique majeure en mai 2026 : l'utilisation du DDoS comme simple écran de fumée (Smokescreen). Pendant que les équipes d'administration SISR sont mobilisées sous pression pour rétablir la disponibilité réseau et traiter les alertes de saturation des liens, les attaquants déclenchent en parallèle une intrusion ciblée ou une exfiltration de données sensibles. L'attaque volumétrique n'est alors qu'un bruit de fond destiné à paralyser les outils de monitoring et à saturer les journaux d'événements (logs). L'administrateur doit donc maintenir une vigilance double : tout en activant les centres de nettoyage (Scrubbing), il est impératif de continuer à surveiller les accès aux bases de données."
+                desc: "Imperva met en lumière une tendance tactique majeure en mai 2026 : l'utilisation du DDoS comme simple écran de fumée (Smokescreen). Pendant que les équipes d'administration systèmes et réseaux sont mobilisées sous pression pour rétablir la disponibilité réseau et traiter les alertes de saturation des liens, les attaquants déclenchent en parallèle une intrusion ciblée ou une exfiltration de données sensibles. L'attaque volumétrique n'est alors qu'un bruit de fond destiné à paralyser les outils de monitoring et à saturer les journaux d'événements (logs). L'administrateur doit donc maintenir une vigilance double : tout en activant les centres de nettoyage (Scrubbing), il est impératif de continuer à surveiller les accès aux bases de données."
             }
         ];
 
@@ -1149,7 +1137,7 @@
             log("ALERTE : Botnet synchronisé détecté !", "#ff3333");
             attackInterval = setInterval(() => {
                 zombies.forEach(z => createPacket(z));
-                if(Math.random() > 0.85) log("SISR : Saturation de la pile TCP détectée", "#ff3333");
+                if(Math.random() > 0.85) log("ALERTE : Saturation de la pile TCP détectée", "#ff3333");
             }, 300);
         }
         function stopAtk() {
